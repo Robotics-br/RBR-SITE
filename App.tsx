@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import About from './components/About';
+import Team from './components/Team';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -13,6 +15,8 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<About />} />
+            <Route path="/equipe" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

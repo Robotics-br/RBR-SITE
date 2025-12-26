@@ -39,7 +39,8 @@ const Navbar: React.FC = () => {
             <a href="/#creators" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Para Criadores</a>
             <a href="/#empresas" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Para Empresas</a>
             <a href="/#portfolio" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Portfólio</a>
-            <a href="/#sobre" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Sobre</a>
+            <Link to="/sobre" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Sobre</Link>
+            <Link to="/equipe" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Equipe</Link>
             <Link to="/contact" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Contato</Link>
           </div>
 
@@ -69,7 +70,8 @@ const Navbar: React.FC = () => {
           <a href="/#creators" className="text-base font-medium text-slate-600 py-2">Para Criadores</a>
           <a href="/#empresas" className="text-base font-medium text-slate-600 py-2">Para Empresas</a>
           <a href="/#portfolio" className="text-base font-medium text-slate-600 py-2">Portfólio</a>
-          <a href="/#sobre" className="text-base font-medium text-slate-600 py-2">Sobre</a>
+          <Link to="/sobre" className="text-base font-medium text-slate-600 py-2">Sobre</Link>
+          <Link to="/equipe" className="text-base font-medium text-slate-600 py-2">Equipe</Link>
           <Link to="/contact" className="text-base font-medium text-slate-600 py-2">Contato</Link>
           <Link to="/contact" className="w-full bg-slate-900 text-white px-5 py-3 rounded-lg text-base font-medium text-center">
             Falar com Especialista

@@ -33,7 +33,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-4">Empresa</h4>
             <ul className="space-y-3 text-sm text-slate-600">
-              <li><a href="/#sobre" className="hover:text-indigo-600 transition-colors">Sobre Nós</a></li>
+              <li><Link to="/sobre" className="hover:text-indigo-600 transition-colors">Sobre Nós</Link></li>
+              <li><Link to="/equipe" className="hover:text-indigo-600 transition-colors">Equipe</Link></li>
               <li><Link to="/contact" className="hover:text-indigo-600 transition-colors">Contato</Link></li>
               <li><a href="/#portfolio" className="hover:text-indigo-600 transition-colors">Portfólio</a></li>
               <li><a href="/#servicos" className="hover:text-indigo-600 transition-colors">Serviços</a></li>
