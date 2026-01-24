@@ -1,0 +1,60 @@
+# Product Requirements Document (PRD) - RoboticsBr Site Institucional
+
+## 1. Visão Geral do Produto
+O site da **RoboticsBr** é uma plataforma institucional high-end que serve como o principal ponto de contato e conversão para a empresa. A RoboticsBr posiciona-se como uma empresa híbrida que une **Tecnologia (Engenharia de Software)** e **Marketing (Estratégia Digital)** para escalar negócios e criadores de conteúdo.
+
+- **Slogan**: Suas ideias, marketing e tecnologia gerando resultados.
+- **Missão**: Eliminar as barreiras entre T.I. e Marketing, fornecendo uma infraestrutura completa de crescimento.
+
+## 2. Público-Alvo
+O projeto foca em dois segmentos principais:
+1.  **Criadores & Influencers**: Indivíduos com grandes comunidades que precisam de tecnologia invisível (CRM, automação, BI) para monetizar sua audiência.
+2.  **Empresas em Escala**: Negócios que buscam performance baseada em engenharia e ROI real através de sistemas web robustos e marketing orientado a dados.
+
+## 3. Proposta de Valor
+A RoboticsBr resolve os problemas comuns encontrados em agências tradicionais (falta de conhecimento técnico) e fábricas de software (falta de visão comercial):
+- **Desenvolvimento High-End**: Foco 100% em conversão e estabilidade, sem templates prontos.
+- **Inteligência de Dados (BI)**: Decisões baseadas em números reais com rastreamento avançado server-side.
+- **Growth Marketing**: Funis de vendas otimizados por tecnologia e testes A/B contínuos.
+
+## 4. Requisitos de Funcionalidades (Páginas e Seções)
+
+### 4.1. Home Page
+- **Hero Section**: Impacto visual imediato com copywriting focado em escala e resultados. Inclui CTA principal "Quero Escalar Agora".
+- **Social Proof**: Seção para validação e autoridade (Logos de parceiros/clientes).
+- **Solution Hybrid**: Explicação visual da união entre TI e Marketing.
+- **Audience Segments**: Divisão clara entre soluções para Creators e Empresas.
+- **Tech Pillars**: Explicação dos três pilares: Desenvolvimento, BI e Growth.
+- **Portfolio**: Carrossel dinâmico exibindo projetos realizados.
+
+### 4.2. Sobre (About)
+- Detalhamento da metodologia e filosofia da empresa.
+
+### 4.3. Equipe (Team)
+- Apresentação dos profissionais por trás da tecnologia e estratégia.
+
+### 4.4. Contato (Contact)
+- Formulário de captura de leads e informações de contato direto.
+
+## 5. Requisitos Não Funcionais
+
+### 5.1. Tech Stack
+- **Frontend**: React 19.2.3, Vite, TypeScript.
+- **Estilização**: Tailwind CSS (customizado com cores da marca), Lucide React para ícones.
+- **Motion Design**: Uso de animações suaves e transições para experiência premium.
+- **Infraestrutura**: Compatibilidade total com Vercel para deploy contínuo.
+
+### 5.2. Design e UX/UI
+- **Aesthetics**: Glassmorphism, gradientes suaves (Stripe-style), sombras profundas e tipografia moderna (Inter/Sans-serif).
+- **Responsividade**: Mobile-first, garantindo que a experiência seja impecável em todos os dispositivos.
+- **Performance**: Carregamento rápido (Vite) e otimização de ativos.
+
+## 6. Fluxos de Conversão
+1.  **Primário**: "Quero Escalar Agora" -> Redirecionamento para contato/formulário.
+2.  **Secundário**: "Entenda como funciona" -> Scroll para a seção de soluções.
+3.  **Segmentado**: CTAs específicos para Creators e Empresas.
+
+## 7. Métricas de Sucesso (KPIs)
+- **Taxa de Conversão**: Percentual de visitantes que entram em contato.
+- **Tempo Médio na Página**: Engajamento com o conteúdo de valor.
+- **Performance (Lighthouse)**: Score acima de 90 em Performance e SEO.
