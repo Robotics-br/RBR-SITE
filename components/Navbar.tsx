@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
@@ -46,8 +46,8 @@ const Navbar: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/contact" className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
-              Falar com Especialista
+            <Link to="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
+              Receber Proposta em 24h
             </Link>
           </div>
 
@@ -73,8 +73,8 @@ const Navbar: React.FC = () => {
           <Link to="/sobre" className="text-base font-medium text-slate-600 py-2">Sobre</Link>
           <Link to="/equipe" className="text-base font-medium text-slate-600 py-2">Equipe</Link>
           <Link to="/contact" className="text-base font-medium text-slate-600 py-2">Contato</Link>
-          <Link to="/contact" className="w-full bg-slate-900 text-white px-5 py-3 rounded-lg text-base font-medium text-center">
-            Falar com Especialista
+          <Link to="/contact" className="w-full bg-indigo-600 text-white px-5 py-3 rounded-lg text-base font-bold text-center">
+            Receber Proposta em 24h
           </Link>
         </div>
       )}

@@ -16,28 +16,28 @@ const Hero: React.FC = () => {
           <div className="lg:col-span-6 mb-12 lg:mb-0 relative z-10">
             <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
               <span className="text-xs font-bold tracking-wide uppercase text-indigo-600">
-                Marketing e Tecnologia
+                Marketing + Tecnologia = Resultado
               </span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
-              Suas ideias,<br />
-              marketing e<br />
+              Pare de perder dinheiro<br />
+              com marketing que não converte<br />
               <span className="inline-block mt-2 bg-stripe-gradient text-white px-4 py-1 rounded-lg shadow-xl transform -rotate-1 origin-left">
-                tecnologia gerando resultados.
+                e tecnologia que não vende.
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-lg">
-              A infraestrutura completa de crescimento para criadores ambiciosos e empresas que precisam de escala. Unimos engenharia de software e estratégia digital para transformar sua visão em receita recorrente.
+              Unimos engenharia de software e estratégia digital em um único ecossistema que transforma cliques em receita recorrente. Sem silos, sem achismo — só resultado mensurável.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-stripe-gradient hover:opacity-90 transition-all shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1">
-                Quero Escalar Agora
-              </button>
-              <a href="#how-it-works" className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold text-slate-700 hover:text-indigo-600 transition-colors group">
-                Entenda como funciona
+              <a href="/contact" className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1">
+                Agendar Diagnóstico Gratuito
+              </a>
+              <a href="#portfolio" className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold text-slate-700 hover:text-indigo-600 transition-colors group">
+                Ver Casos de Sucesso
                 <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

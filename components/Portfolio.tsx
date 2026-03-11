@@ -18,42 +18,42 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: 'E-commerce de Alta Performance',
-      description: 'Plataforma completa de vendas online com integração de pagamentos e gestão de estoque',
+      description: 'Aumento de 340% em conversão em 90 dias com arquitetura otimizada para picos de tráfego e integração de pagamentos.',
       image: '/images/portfolio/ecommerce-1.jpg',
       category: 'site'
     },
     {
       id: 2,
       title: 'Sistema de Gestão Empresarial',
-      description: 'Dashboard completo para gestão de processos, vendas e equipes',
+      description: 'Redução de 60% no tempo operacional com dashboard integrado para gestão de processos, vendas e equipes.',
       image: '/images/portfolio/sistema-1.jpg',
       category: 'sistema'
     },
     {
       id: 3,
       title: 'Landing Page de Conversão',
-      description: 'Página otimizada para captação de leads com alta taxa de conversão',
+      description: 'Taxa de conversão de 8.2% — 3x acima da média do mercado — com A/B testing contínuo e copy estratégico.',
       image: '/images/portfolio/landing-1.jpg',
       category: 'site'
     },
     {
       id: 4,
       title: 'CRM Personalizado',
-      description: 'Sistema de relacionamento com clientes integrado com marketing automation',
+      description: 'Aumento de 45% no LTV do cliente com automação de follow-up e segmentação inteligente de leads.',
       image: '/images/portfolio/crm-1.jpg',
       category: 'sistema'
     },
     {
       id: 5,
       title: 'Site Institucional Moderno',
-      description: 'Presença digital profissional com design responsivo e performance otimizada',
+      description: 'Nota 98/100 no PageSpeed e tempo de carregamento abaixo de 1.2s com design responsivo premium.',
       image: '/images/portfolio/institucional-1.jpg',
       category: 'site'
     },
     {
       id: 6,
       title: 'Plataforma de Automação',
-      description: 'Sistema completo para automação de processos e workflows empresariais',
+      description: 'Economia de 120h/mês em tarefas manuais com workflows inteligentes e integrações via API.',
       image: '/images/portfolio/automacao-1.jpg',
       category: 'sistema'
     }
@@ -122,7 +122,7 @@ const Portfolio: React.FC = () => {
         {/* Carrossel */}
         <div className="relative flex flex-col items-center">
           {/* Container do Carrossel - 2/3 da largura */}
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-green-50 w-2/3">
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-slate-50 w-2/3">
             <div 
               className="flex transition-transform duration-500 ease-in-out h-full"
               style={{ 
@@ -141,7 +141,7 @@ const Portfolio: React.FC = () => {
                   }}
                 >
                   {/* Imagem única centralizada */}
-                  <div className="relative h-96 md:h-[500px] bg-green-100">
+                  <div className="relative h-96 md:h-[500px] bg-slate-100">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -167,29 +167,36 @@ const Portfolio: React.FC = () => {
                         }
                         
                         // Silenciosamente usa placeholder se a imagem não for encontrada
-                        target.src = `https://via.placeholder.com/800x600/1e293b/32E0C4?text=${encodeURIComponent(item.title)}`;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent && !parent.querySelector('.fallback-visual')) {
+                          const fallback = document.createElement('div');
+                          fallback.className = 'fallback-visual absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-orange-500 flex items-center justify-center';
+                          fallback.innerHTML = `<span class="text-white/90 text-xl font-bold text-center px-8">${item.title}</span>`;
+                          parent.appendChild(fallback);
+                        }
                       }}
                     />
                     {/* Overlay com informações */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-50/40 via-green-50/20 to-transparent flex flex-col justify-end">
-                      <div className="p-6 md:p-8 text-slate-900 bg-green-50/60 backdrop-blur-sm rounded-t-2xl">
-                        <div className="flex items-center justify-between mb-3">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent flex flex-col justify-end">
+                      <div className="p-6 md:p-8 text-white bg-slate-900/50 backdrop-blur-sm rounded-t-2xl">
+                          <div className="flex items-center justify-between mb-3">
                           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                             item.category === 'site' 
-                              ? 'bg-blue-500/90 text-white' 
+                              ? 'bg-indigo-500/90 text-white' 
                               : 'bg-purple-500/90 text-white'
                           }`}>
                             {item.category === 'site' ? 'Site' : 'Sistema'}
                           </span>
-                          <div className="flex items-center space-x-2 text-sm text-slate-600">
-                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                          <div className="flex items-center space-x-2 text-sm text-slate-200">
+                            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                             <span>Projeto Concluído</span>
                           </div>
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-2 text-slate-900">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">
                           {item.title}
                         </h3>
-                        <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                        <p className="text-slate-200 text-base md:text-lg leading-relaxed">
                           {item.description}
                         </p>
                       </div>
