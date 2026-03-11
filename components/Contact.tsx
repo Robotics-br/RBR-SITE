@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                                     <div className="ml-4">
                                         <h5 className="text-lg font-medium text-slate-900">Endereço</h5>
                                         <p className="mt-1 text-slate-600">
-                                            Rua: Ray Wesley Herrick, 1601<br />
+                                            Rua: Ray Wesley Herrick<br />
                                             CEP: 13565-090<br />
                                             SÃO CARLOS - SP
                                         </p>
@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                                     <div className="ml-4">
                                         <h5 className="text-lg font-medium text-slate-900">Telefone / WhatsApp</h5>
                                         <p className="mt-1 text-slate-600">
-                                            (16) 99999-9999
+                                            (16) 99296-7484
                                         </p>
                                     </div>
                                 </div>
