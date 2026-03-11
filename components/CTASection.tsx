@@ -26,7 +26,7 @@ const CTASection: React.FC = () => {
             <ArrowRight size={18} className="ml-2" />
           </a>
           <a
-            href="https://wa.me/5516999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20diagnóstico%20gratuito."
+            href="https://wa.me/5516992967484?text=Olá!%20Gostaria%20de%20agendar%20um%20diagnóstico%20gratuito."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all transform hover:-translate-y-1"
