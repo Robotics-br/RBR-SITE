@@ -78,14 +78,14 @@ const Contact: React.FC = () => {
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
                         <span className="text-xs font-bold tracking-wide uppercase text-indigo-600">
-                            Diagnóstico Estratégico de IA
+                            Diagnóstico de Eficiência e Modernização
                         </span>
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-                        Descubra o potencial da IA para sua empresa
+                        Descubra o potencial de modernização da sua empresa
                     </h1>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Conte-nos sobre sua empresa e receba um diagnóstico estratégico personalizado. Identificamos as melhores oportunidades de IA para otimizar seus processos e acelerar seus resultados.
+                        Conte-nos sobre sua empresa e receba um diagnóstico personalizado. Identificamos as melhores oportunidades para otimizar seus processos, automatizar tarefas e acelerar seus resultados.
                     </p>
                 </div>
 

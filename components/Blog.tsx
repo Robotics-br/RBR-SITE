@@ -14,17 +14,17 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Por que sua empresa precisa de IA agora — e não daqui a 2 anos',
-    excerpt: 'Empresas que adotam IA cedo ganham vantagem competitiva duradoura. Entenda por que esperar é o maior risco para pequenas e médias empresas.',
-    category: 'IA para empresas',
+    title: 'Por que sua empresa precisa se modernizar agora — e não daqui a 2 anos',
+    excerpt: 'Empresas que modernizam processos cedo ganham vantagem competitiva duradoura. Entenda por que esperar é o maior risco para o seu negócio.',
+    category: 'Modernização',
     readTime: '5 min',
     date: '2026-03-01',
     url: '#',
   },
   {
     id: 2,
-    title: 'Chatbots com IA: como empresas estão economizando 30+ horas por semana',
-    excerpt: 'Casos reais de como agentes inteligentes automatizam atendimento, agendamento e qualificação de leads sem perder a personalização.',
+    title: 'Atendimento automatizado: como empresas estão economizando 30+ horas por semana',
+    excerpt: 'Casos reais de como assistentes digitais automatizam atendimento, agendamento e qualificação de leads sem perder a personalização.',
     category: 'Automação',
     readTime: '7 min',
     date: '2026-02-20',
@@ -32,8 +32,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    title: 'O guia prático do Diagnóstico de IA para pequenas empresas',
-    excerpt: 'Passo a passo de como identificar processos que podem ser automatizados e calcular o ROI antes de investir em soluções de IA.',
+    title: 'O guia prático do Diagnóstico de Eficiência para sua empresa',
+    excerpt: 'Passo a passo de como identificar processos que podem ser automatizados e calcular o retorno antes de investir em soluções de modernização.',
     category: 'Metodologia',
     readTime: '6 min',
     date: '2026-02-10',
@@ -41,8 +41,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: 'n8n + IA: automação de processos sem código para sua empresa',
-    excerpt: 'Como usar ferramentas de automação low-code integradas com inteligência artificial para eliminar tarefas repetitivas na sua empresa.',
+    title: 'Automação de processos sem código: o que sua empresa precisa saber',
+    excerpt: 'Como usar ferramentas de automação low-code integradas com tecnologia de suporte para eliminar tarefas repetitivas na sua operação.',
     category: 'Tecnologia',
     readTime: '8 min',
     date: '2026-01-28',
@@ -50,8 +50,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 5,
-    title: 'LGPD e IA: o que sua empresa precisa saber antes de implementar',
-    excerpt: 'Guia de conformidade para usar IA com dados de clientes de forma segura, ética e em conformidade com a legislação brasileira.',
+    title: 'LGPD e automação: o que sua empresa precisa saber antes de implementar',
+    excerpt: 'Guia de conformidade para usar automação com dados de clientes de forma segura, ética e em conformidade com a legislação brasileira.',
     category: 'Conformidade',
     readTime: '6 min',
     date: '2026-01-15',
@@ -59,8 +59,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    title: 'Case: como uma clínica reduziu 60% das ligações com agente de IA',
-    excerpt: 'Estudo de caso detalhado de como implementamos um chatbot inteligente para agendamento e dúvidas em uma clínica com 3 unidades.',
+    title: 'Case: como uma clínica reduziu 60% das ligações com atendimento automatizado',
+    excerpt: 'Estudo de caso detalhado de como implementamos um assistente digital para agendamento e dúvidas em uma clínica com 3 unidades.',
     category: 'Case Study',
     readTime: '10 min',
     date: '2026-01-05',
@@ -69,7 +69,7 @@ const blogPosts: BlogPost[] = [
 ];
 
 const categoryColors: Record<string, string> = {
-  'IA para empresas': 'bg-indigo-100 text-indigo-700',
+  'Modernização': 'bg-indigo-100 text-indigo-700',
   'Automação': 'bg-purple-100 text-purple-700',
   'Metodologia': 'bg-emerald-100 text-emerald-700',
   'Tecnologia': 'bg-cyan-100 text-cyan-700',
@@ -79,7 +79,7 @@ const categoryColors: Record<string, string> = {
 
 const Blog: React.FC = () => {
   React.useEffect(() => {
-    document.title = 'Blog - RoboticsBr | IA, Social Media e Automação';
+    document.title = 'Blog - RoboticsBr | Modernização e Automação para Empresas';
     window.scrollTo(0, 0);
   }, []);
 
@@ -96,8 +96,13 @@ const Blog: React.FC = () => {
             Blog RoboticsBr
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Artigos sobre inteligência artificial, automação e transformação digital para empresas que querem crescer com inteligência.
+            Artigos sobre modernização de processos, automação inteligente e transformação digital para empresas que querem crescer com estratégia.
           </p>
+          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl px-6 py-3 inline-block">
+            <p className="text-sm text-amber-800 font-medium">
+              Em breve, novos artigos sobre modernização de processos e automação para empresas.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

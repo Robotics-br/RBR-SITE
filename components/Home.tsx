@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                 <SolutionHybrid />
             </AnimatedSection>
 
-            {/* Soluções de IA */}
+            {/* Pilares do ecossistema */}
             <AnimatedSection animation="fade-up">
                 <AudienceSegments />
             </AnimatedSection>
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 <Methodology />
             </AnimatedSection>
 
-            {/* Pilares técnicos de IA */}
+            {/* Serviços */}
             <AnimatedSection animation="fade-up">
                 <TechPillars />
             </AnimatedSection>
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
                 <Testimonials />
             </AnimatedSection>
 
-            {/* Portfólio de projetos de IA */}
+            {/* Cases de sucesso */}
             <AnimatedSection animation="fade-up">
                 <Portfolio />
             </AnimatedSection>

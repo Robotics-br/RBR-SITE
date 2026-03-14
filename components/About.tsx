@@ -78,9 +78,9 @@ const TeamCarousel: React.FC = () => {
     return (
         <section className="py-24 bg-[#f6f9fc] overflow-hidden relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-                <h2 className="text-3xl font-bold text-slate-900 mb-4">Quem constrói a IA da sua empresa</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">Quem conduz a transformação da sua empresa</h2>
                 <p className="text-slate-600 max-w-2xl mx-auto">
-                    Conheça os especialistas dedicados a transformar sua empresa com inteligência artificial.
+                    Conheça os especialistas dedicados a transformar sua empresa com tecnologia de suporte e automação inteligente.
                 </p>
             </div>
 
@@ -158,7 +158,7 @@ const TeamCarousel: React.FC = () => {
 
 const About: React.FC = () => {
     React.useEffect(() => {
-        document.title = 'Sobre - RoboticsBr | IA, Social Media e Automação para sua empresa';
+        document.title = 'Sobre - RoboticsBr | Ecossistema Completo de Modernização';
         window.scrollTo(0, 0);
     }, []);
 
@@ -173,19 +173,19 @@ const About: React.FC = () => {
                     <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
                         <Brain size={14} className="text-indigo-600" />
                         <span className="text-xs font-bold tracking-wide uppercase text-indigo-600">
-                            IA + Social Media + Automação
+                            Ecossistema Completo de Modernização
                         </span>
                     </div>
 
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight mb-8">
-                        Um parceiro.<br />
+                        Mais do que ferramentas.<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-orange-500">
-                            Solução completa.
+                            Parceria contínua.
                         </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                        Nascemos para resolver um problema claro: empresas que querem crescer precisam de IA, presença digital forte e automação — mas não querem lidar com 3 fornecedores diferentes. Na RoboticsBr, tudo vem de um único lugar.
+                        Mais do que implementar ferramentas, somos o braço direito da sua transformação digital. Inovação não é um destino, é uma parceria contínua com suporte tecnológico.
                     </p>
                 </div>
             </section>
@@ -214,13 +214,13 @@ const About: React.FC = () => {
                                 Por que a solução completa faz a diferença.
                             </h2>
                             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                Empresas que contratam uma agência de social media, outra de IA e outra de sistemas acabam com processos desconectados, custos altos e resultados fragmentados.
+                                Empresas que contratam uma agência de social media, outra de tecnologia e outra de sistemas acabam com processos desconectados, custos altos e resultados fragmentados.
                             </p>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed font-semibold">
                                 Na RoboticsBr, tudo é integrado — porque só assim funciona de verdade.
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                Combinamos <span className="font-bold text-slate-900">consultoria em IA</span>, <span className="font-bold text-slate-900">especialistas de social media</span> e <span className="font-bold text-slate-900">automação do processo criativo</span> em um único ecossistema. Sua empresa ganha presença digital forte, operações automatizadas e decisões baseadas em dados — tudo com um único parceiro.
+                                Combinamos <span className="font-bold text-slate-900">consultoria em modernização de processos</span>, <span className="font-bold text-slate-900">especialistas de social media</span> e <span className="font-bold text-slate-900">automação do processo criativo</span> em um único ecossistema. Sua empresa ganha presença digital forte, operações automatizadas e decisões baseadas em dados — tudo com um único parceiro.
                             </p>
                         </div>
                     </div>
@@ -232,7 +232,7 @@ const About: React.FC = () => {
                     <div className="mb-16">
                         <h2 className="text-3xl font-bold text-slate-900">Nossos Pilares</h2>
                         <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                            O que nos guia na construção de cada solução de IA para nossos clientes.
+                            O que nos guia na construção de cada solução para nossos clientes.
                         </p>
                     </div>
 
@@ -243,7 +243,7 @@ const About: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">Foco em Resultado</h3>
                             <p className="text-slate-600">
-                                IA por IA é hobby. Usamos tecnologia para mover ponteiros de produtividade, receita e eficiência operacional.
+                                Tecnologia por tecnologia é hobby. Usamos automação inteligente para mover ponteiros de produtividade, receita e eficiência operacional.
                             </p>
                         </div>
 
@@ -253,7 +253,7 @@ const About: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">Automação Inteligente</h3>
                             <p className="text-slate-600">
-                                Se pode ser automatizado com IA, será. Tempo humano vai para estratégia, não para tarefas repetitivas.
+                                Se pode ser automatizado, será. Tempo humano vai para estratégia, não para tarefas repetitivas.
                             </p>
                         </div>
 
@@ -263,7 +263,7 @@ const About: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">Social Media Integrado</h3>
                             <p className="text-slate-600">
-                                Especialistas de social media com IA generativa que automatizam o processo criativo da sua empresa do início ao fim.
+                                Especialistas de social media que automatizam o processo criativo da sua empresa do início ao fim.
                             </p>
                         </div>
 
@@ -286,9 +286,9 @@ const About: React.FC = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-indigo-900/30 blur-3xl rounded-full pointer-events-none"></div>
 
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para ter IA, social media e automação em um único parceiro?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para modernizar sua empresa com um parceiro que entende seu negócio?</h2>
                     <p className="text-indigo-200 text-lg mb-8 max-w-2xl mx-auto">
-                        Agende seu Diagnóstico Estratégico e descubra como unificar IA, presença digital e automação para acelerar o crescimento da sua empresa.
+                        Agende seu Diagnóstico Estratégico e descubra como unificar modernização, presença digital e automação para acelerar o crescimento da sua empresa.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="/contact" className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">

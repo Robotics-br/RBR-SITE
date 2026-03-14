@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Clock, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Clock, ShieldCheck, Phone } from 'lucide-react';
 
 const CTASection: React.FC = () => {
   return (
@@ -11,10 +11,13 @@ const CTASection: React.FC = () => {
           Sua empresa não pode esperar
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
-          IA, Social Media e Automação — tudo em um único parceiro. Comece agora.
+          Modernização, automação e presença digital — tudo em um único parceiro. Comece agora.
         </h2>
-        <p className="text-indigo-200 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Chega de fornecedores fragmentados. Agende seu Diagnóstico Estratégico e receba um plano personalizado que une inteligência artificial, presença digital e automação para o futuro da sua empresa.
+        <p className="text-indigo-200 text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
+          Chega de fornecedores fragmentados. Agende seu Diagnóstico de Eficiência e receba um plano personalizado para transformar a operação da sua empresa.
+        </p>
+        <p className="text-indigo-300/80 text-sm mb-10">
+          Projetos modulares a partir de R$ 2.500 — adequados à realidade do seu negócio.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -22,16 +25,17 @@ const CTASection: React.FC = () => {
             href="/contact"
             className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full bg-indigo-600 hover:bg-indigo-500 text-white transition-all shadow-lg hover:shadow-indigo-500/40 transform hover:-translate-y-1"
           >
-            Agendar Diagnóstico Estratégico
+            Quero meu Diagnóstico de Eficiência Gratuito
             <ArrowRight size={18} className="ml-2" />
           </a>
           <a
-            href="https://wa.me/5516999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20consultoria%20de%20IA%20para%20minha%20empresa."
+            href="https://wa.me/5516999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20chamada%20de%20descoberta%20de%2015%20minutos."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all transform hover:-translate-y-1"
           >
-            Falar pelo WhatsApp
+            <Phone size={16} className="mr-2" />
+            Chamada de Descoberta de 15 min
           </a>
         </div>
 
@@ -42,7 +46,7 @@ const CTASection: React.FC = () => {
           </div>
           <div className="flex items-center gap-2">
             <ShieldCheck size={16} />
-            <span>Diagnóstico personalizado</span>
+            <span>Diagnóstico personalizado e gratuito</span>
           </div>
         </div>
       </div>

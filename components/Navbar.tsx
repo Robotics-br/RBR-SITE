@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:block">
             <Link to="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
-              Diagnóstico Estratégico de IA
+              Diagnóstico de Eficiência Gratuito
             </Link>
           </div>
 
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
           <Link to="/sobre" className="text-base font-medium text-slate-600 py-2">Sobre</Link>
           <Link to="/contact" className="text-base font-medium text-slate-600 py-2">Contato</Link>
           <Link to="/contact" className="w-full bg-indigo-600 text-white px-5 py-3 rounded-lg text-base font-bold text-center">
-            Diagnóstico Estratégico de IA
+            Diagnóstico de Eficiência Gratuito
           </Link>
         </div>
       )}

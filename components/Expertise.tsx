@@ -1,50 +1,49 @@
 import React from 'react';
-import { Sparkles, Zap, Database, Globe, Shield, Layers, Megaphone, Palette } from 'lucide-react';
+import { MessageSquare, Zap, Database, Globe, Shield, Layers, Megaphone, Palette } from 'lucide-react';
 
 const technologies = [
-  { name: 'OpenAI (GPT)', category: 'LLMs' },
-  { name: 'Anthropic (Claude)', category: 'LLMs' },
-  { name: 'Google AI (Gemini)', category: 'LLMs' },
-  { name: 'n8n', category: 'Automação' },
-  { name: 'Cursor AI', category: 'Desenvolvimento' },
-  { name: 'React / Next.js', category: 'Frontend' },
-  { name: 'Node.js / Python', category: 'Backend' },
-  { name: 'PostgreSQL / MongoDB', category: 'Dados' },
-  { name: 'Midjourney / DALL-E', category: 'IA Criativa' },
-  { name: 'Meta Business Suite', category: 'Social Media' },
-  { name: 'Buffer / Hootsuite', category: 'Social Media' },
+  { name: 'OpenAI (GPT)' },
+  { name: 'Anthropic (Claude)' },
+  { name: 'Google Gemini' },
+  { name: 'n8n' },
+  { name: 'React / Next.js' },
+  { name: 'Node.js / Python' },
+  { name: 'PostgreSQL / MongoDB' },
+  { name: 'Midjourney / DALL-E' },
+  { name: 'Meta Business Suite' },
+  { name: 'Buffer / Hootsuite' },
 ];
 
 const capabilities = [
   {
-    icon: Sparkles,
-    title: 'Chatbots e Agentes IA',
-    description: 'Atendimento automatizado, qualificação de leads e suporte 24/7 com linguagem natural.',
+    icon: MessageSquare,
+    title: 'Atendimento Automatizado e Fluido',
+    description: 'Assistentes digitais para qualificação de leads, suporte 24/7 e interações naturais com seus clientes.',
   },
   {
     icon: Megaphone,
-    title: 'Social Media com IA',
-    description: 'Estratégia de conteúdo, criação de posts, calendário editorial e análise de performance — tudo potencializado por IA generativa.',
+    title: 'Presença Digital Otimizada',
+    description: 'Estratégia de conteúdo, automação criativa, calendário editorial e análise de performance — tudo integrado.',
   },
   {
     icon: Palette,
     title: 'Automação do Processo Criativo',
-    description: 'Geração de textos, imagens e vídeos curtos com IA. Seu time criativo produz mais em menos tempo.',
+    description: 'Geração de textos, imagens e materiais visuais automatizados. Sua equipe criativa produz mais em menos tempo.',
   },
   {
     icon: Zap,
-    title: 'Automação Inteligente',
-    description: 'Workflows que eliminam tarefas repetitivas e conectam seus sistemas de ponta a ponta.',
+    title: 'Automação Inteligente de Processos',
+    description: 'Workflows que eliminam tarefas repetitivas e conectam seus sistemas de ponta a ponta, sem fricção.',
   },
   {
     icon: Database,
-    title: 'Análise de Dados com IA',
-    description: 'Dashboards, previsões e insights acionáveis que transformam dados brutos em decisões.',
+    title: 'Inteligência de Dados',
+    description: 'Dashboards, previsões e insights acionáveis que transformam dados brutos em decisões estratégicas.',
   },
   {
     icon: Globe,
-    title: 'Integrações Complexas',
-    description: 'Conectamos ERPs, CRMs, marketplaces e plataformas internas via API de forma segura.',
+    title: 'Integrações de Sistemas',
+    description: 'Conectamos ERPs, CRMs, marketplaces e plataformas internas via API de forma segura e eficiente.',
   },
   {
     icon: Shield,
@@ -53,7 +52,7 @@ const capabilities = [
   },
   {
     icon: Layers,
-    title: 'Sistemas Sob Medida',
+    title: 'Sistemas e Plataformas Sob Medida',
     description: 'Plataformas web, PWAs e painéis administrativos construídos para a realidade do seu negócio.',
   },
 ];
@@ -64,10 +63,10 @@ const Expertise: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Expertise completa: IA, Social Media e Automação
+            Expertise completa: tecnologia, criatividade e estratégia
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Dominamos IA, automação e social media — e unimos tudo para resolver os desafios específicos da sua empresa em um único ecossistema.
+            Dominamos automação, presença digital e inteligência de dados — e unimos tudo para resolver os desafios específicos da sua empresa em um único ecossistema.
           </p>
         </div>
 
@@ -87,7 +86,7 @@ const Expertise: React.FC = () => {
         </div>
 
         <div className="bg-slate-900 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-xl font-bold text-white mb-6">Tecnologias que dominamos</h3>
+          <h3 className="text-xl font-bold text-white mb-6">Tecnologias que impulsionam sua modernização</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {technologies.map((tech) => (
               <div

@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               <Logo height={40} />
             </div>
             <p className="text-slate-500 text-sm max-w-xs mb-6">
-              IA, Social Media e Automação em um único parceiro para sua empresa. Do diagnóstico à implementação, com resultados mensuráveis.
+              Ecossistema completo de modernização para sua empresa. Análise de processos, automação, presença digital e acompanhamento contínuo — tudo em um único parceiro.
             </p>
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -63,8 +63,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-4">Soluções</h4>
             <ul className="space-y-3 text-sm text-slate-600">
-              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">IA para empresas</a></li>
-              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Social Media com IA</a></li>
+              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Modernização de Processos</a></li>
+              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Gestão Estratégica de Mídias</a></li>
               <li><a href="/#metodologia" className="hover:text-indigo-600 transition-colors">Metodologia</a></li>
               <li><a href="/#portfolio" className="hover:text-indigo-600 transition-colors">Cases</a></li>
             </ul>
@@ -83,9 +83,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 mb-4">Recursos</h4>
             <ul className="space-y-3 text-sm text-slate-600">
-              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Automação com IA</a></li>
+              <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Automação de Fluxos</a></li>
               <li><a href="/#solucoes" className="hover:text-indigo-600 transition-colors">Automação Criativa</a></li>
-              <li><a href="/#servicos" className="hover:text-indigo-600 transition-colors">Dados e BI</a></li>
+              <li><a href="/#servicos" className="hover:text-indigo-600 transition-colors">Inteligência de Dados</a></li>
               <li><Link to="/blog" className="hover:text-indigo-600 transition-colors">Blog</Link></li>
             </ul>
           </div>

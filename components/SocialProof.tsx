@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Clock, Cpu, ThumbsUp } from 'lucide-react';
+import { TrendingUp, Clock, Zap, ThumbsUp } from 'lucide-react';
 
 interface MetricProps {
   icon: React.ReactNode;
@@ -22,7 +22,7 @@ const SocialProof: React.FC = () => {
     <section className="py-14 border-b border-slate-100 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold text-slate-400 mb-10 uppercase tracking-widest">
-          Resultados reais com IA para empresas como a sua
+          Resultados reais com modernização de processos
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-start justify-items-center">
           <Metric
@@ -36,9 +36,9 @@ const SocialProof: React.FC = () => {
             label="Economizadas por mês em média"
           />
           <Metric
-            icon={<Cpu size={24} />}
+            icon={<Zap size={24} />}
             value="15 dias"
-            label="Para o primeiro agente IA funcional"
+            label="Para o primeiro resultado concreto"
           />
           <Metric
             icon={<ThumbsUp size={24} />}

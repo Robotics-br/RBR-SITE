@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '5516999999999';
-const DEFAULT_MESSAGE = 'Olá! Vim pelo site da RoboticsBr e gostaria de saber mais sobre consultoria de IA para minha empresa.';
+const DEFAULT_MESSAGE = 'Olá! Vim pelo site da RoboticsBr e gostaria de saber mais sobre modernização e automação para minha empresa.';
 
 const WhatsAppButton: React.FC = () => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
@@ -31,7 +31,7 @@ const WhatsAppButton: React.FC = () => {
             <X size={12} className="text-slate-500" />
           </button>
           <p className="text-sm text-slate-700 font-medium leading-snug">
-            Quer saber como a IA pode ajudar sua empresa? Fale conosco!
+            Quer modernizar sua empresa? Fale com a gente!
           </p>
         </div>
       )}

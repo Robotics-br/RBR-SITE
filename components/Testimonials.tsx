@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     name: 'Fernando Almeida',
     role: 'Diretor de Operações',
     company: 'Distribuidora Almeida',
-    text: 'Achávamos que IA era coisa de empresa grande. A RoboticsBr mostrou que estava ao nosso alcance. Em 3 semanas, automatizamos o atendimento ao cliente e liberamos 4 pessoas para atividades estratégicas. O ROI veio no primeiro mês.',
+    text: 'A RoboticsBr não é um fornecedor — é um parceiro de verdade. Eles mapearam nossos processos, identificaram gargalos que a gente nem percebia e automatizaram tudo em 3 semanas. Liberamos 4 pessoas para atividades estratégicas e o retorno veio no primeiro mês.',
     rating: 5,
     avatar: 'FA',
   },
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     name: 'Patrícia Gonçalves',
     role: 'CEO',
     company: 'PG Assessoria Contábil',
-    text: 'O processo de diagnóstico foi revelador — eles mapearam gargalos que nem sabíamos que existiam. O agente de IA que criaram para triagem de documentos economiza 30 horas por semana da nossa equipe. Atendimento excepcional e acompanhamento de verdade.',
+    text: 'O diagnóstico foi revelador — eles vieram, entenderam nossa dor e construíram a solução junto com a gente. A automação de triagem de documentos economiza 30 horas por semana da equipe. E o acompanhamento quinzenal nos dá segurança de que tudo está evoluindo.',
     rating: 5,
     avatar: 'PG',
   },
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     name: 'Ricardo Torres',
     role: 'Sócio-fundador',
     company: 'Torres Engenharia',
-    text: 'Contratamos para automatizar propostas comerciais e orçamentos. O sistema de IA gera propostas personalizadas em minutos, não em dias. Nosso ciclo de vendas caiu pela metade e a taxa de conversão subiu 35%. Parceria que vale cada centavo.',
+    text: 'O que mais me impressionou foi o suporte humano. Não é só tecnologia — eles sentam com a gente, entendem o negócio e ajustam junto. As propostas comerciais que antes levavam dias agora saem em minutos, e a conversão subiu 35%.',
     rating: 5,
     avatar: 'RT',
   },
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     name: 'Juliana Martins',
     role: 'Gerente Comercial',
     company: 'Clínica Vida Plena',
-    text: 'O chatbot inteligente que implementaram para agendamento e dúvidas dos pacientes transformou nossa recepção. Reduzimos em 60% as ligações telefônicas e os pacientes adoram a praticidade. O treinamento da equipe foi impecável.',
+    text: 'O atendimento automatizado transformou nossa recepção — reduzimos 60% das ligações telefônicas e os pacientes adoram a praticidade. O treinamento da equipe foi impecável, e a gente sente que tem alguém do nosso lado de verdade.',
     rating: 5,
     avatar: 'JM',
   },
@@ -71,7 +71,7 @@ const Testimonials: React.FC = () => {
             O que nossos clientes dizem
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Empresas como a sua já estão colhendo os resultados da IA com nosso acompanhamento.
+            Empresas como a sua já estão colhendo os resultados da modernização com nosso acompanhamento.
           </p>
         </div>
 

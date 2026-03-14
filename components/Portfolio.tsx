@@ -17,43 +17,43 @@ const Portfolio: React.FC = () => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: 'Chatbot Inteligente para Clínica',
-      description: 'Redução de 60% nas ligações telefônicas com agente de IA para agendamento e dúvidas de pacientes.',
+      title: 'Atendimento Automatizado para Clínica',
+      description: 'Redução de 60% nas ligações telefônicas com assistente digital para agendamento e dúvidas de pacientes.',
       image: '/images/portfolio/chatbot-clinica.jpg',
       category: 'sistema'
     },
     {
       id: 2,
       title: 'Automação de Propostas Comerciais',
-      description: 'Ciclo de vendas reduzido pela metade com IA que gera propostas personalizadas em minutos.',
+      description: 'Ciclo de vendas reduzido pela metade com automação que gera propostas personalizadas em minutos.',
       image: '/images/portfolio/automacao-propostas.jpg',
       category: 'sistema'
     },
     {
       id: 3,
-      title: 'Dashboard de BI Inteligente',
-      description: 'Decisões 3x mais rápidas com dashboards inteligentes que consolidam dados de vendas, marketing e operações.',
+      title: 'Dashboard de Inteligência de Dados',
+      description: 'Decisões 3x mais rápidas com dashboards que consolidam dados de vendas, marketing e operações em tempo real.',
       image: '/images/portfolio/dashboard-bi.jpg',
       category: 'sistema'
     },
     {
       id: 4,
-      title: 'Agente de Triagem de Documentos',
-      description: 'Economia de 30h semanais com IA que classifica, extrai e organiza documentos automaticamente.',
+      title: 'Automação de Triagem de Documentos',
+      description: 'Economia de 30h semanais com tecnologia de suporte que classifica, extrai e organiza documentos automaticamente.',
       image: '/images/portfolio/triagem-docs.jpg',
       category: 'sistema'
     },
     {
       id: 5,
-      title: 'Automação de Atendimento ao Cliente',
-      description: '4 colaboradores liberados para atividades estratégicas com IA gerenciando o suporte de primeiro nível.',
+      title: 'Modernização do Atendimento ao Cliente',
+      description: '4 colaboradores liberados para atividades estratégicas com automação gerenciando o suporte de primeiro nível.',
       image: '/images/portfolio/atendimento-ia.jpg',
       category: 'sistema'
     },
     {
       id: 6,
-      title: 'Integração de Sistemas com IA',
-      description: 'ERP, CRM e marketing conectados com workflows inteligentes que eliminam retrabalho e erros manuais.',
+      title: 'Integração Inteligente de Sistemas',
+      description: 'ERP, CRM e marketing conectados com workflows automatizados que eliminam retrabalho e erros manuais.',
       image: '/images/portfolio/integracao-ia.jpg',
       category: 'sistema'
     }
@@ -92,10 +92,10 @@ const Portfolio: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-            Resultados reais para empresas como a sua
+            Cases de modernização e automação
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Na RoboticsBr, cada projeto de IA é uma oportunidade de transformar sua empresa. Desenvolvemos soluções personalizadas, automações inteligentes e estratégias de dados que geram resultados mensuráveis.
+            Na RoboticsBr, cada projeto é uma oportunidade de transformar sua empresa. Desenvolvemos soluções personalizadas, automações inteligentes e estratégias de dados que geram resultados mensuráveis.
           </p>
         </div>
 
@@ -103,14 +103,14 @@ const Portfolio: React.FC = () => {
         <div className="mb-12 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 rounded-2xl p-8 md:p-10 border border-slate-100">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              IA que transforma negócios
+              Tecnologia que transforma negócios
             </h3>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Desenvolvemos <strong>soluções de IA personalizadas</strong>, <strong>automações inteligentes</strong> e{' '}
+              Desenvolvemos <strong>soluções personalizadas</strong>, <strong>automações inteligentes</strong> e{' '}
               <strong>estratégias de dados</strong> que geram resultados mensuráveis: otimização de custos, aumento de eficiência e novas oportunidades de negócio para sua empresa.
             </p>
             <p className="text-slate-700 leading-relaxed">
-              Nossa abordagem combina <strong>expertise técnica em IA</strong> com{' '}
+              Nossa abordagem combina <strong>expertise técnica em automação</strong> com{' '}
               <strong>profundo entendimento de negócios</strong>, garantindo que cada solução seja prática, escalável e com retorno rápido sobre o investimento.
             </p>
           </div>
@@ -179,7 +179,7 @@ const Portfolio: React.FC = () => {
                       <div className="p-6 md:p-8 text-white bg-slate-900/50 backdrop-blur-sm rounded-t-2xl">
                           <div className="flex items-center justify-between mb-3">
                           <span className="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/90 text-white">
-                            {item.category === 'site' ? 'Site' : 'Solução de IA'}
+                            {item.category === 'site' ? 'Site' : 'Automação'}
                           </span>
                           <div className="flex items-center space-x-2 text-sm text-slate-200">
                             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
@@ -245,7 +245,7 @@ const Portfolio: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">15 dias</div>
-            <div className="text-slate-600">Para Primeiro Agente IA</div>
+            <div className="text-slate-600">Para Primeiro Resultado</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">98%</div>

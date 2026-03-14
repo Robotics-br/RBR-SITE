@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Brain, Sparkles, TrendingUp, Megaphone } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers, Sparkles, TrendingUp, Megaphone } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -13,30 +13,30 @@ const Hero: React.FC = () => {
 
           <div className="lg:col-span-6 mb-12 lg:mb-0 relative z-10">
             <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
-              <Brain size={14} className="text-indigo-600" />
+              <Layers size={14} className="text-indigo-600" />
               <span className="text-xs font-bold tracking-wide uppercase text-indigo-600">
-                IA + Social Media + Automação — Tudo em um só lugar
+                Ecossistema completo de modernização
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
-              IA, Social Media e<br />
-              Automação reunidos para<br />
+              Sua empresa mais ágil,<br />
+              seus processos mais<br />
               <span className="inline-block mt-2 bg-stripe-gradient text-white px-4 py-1 rounded-lg shadow-xl transform -rotate-1 origin-left">
-                fazer seu negócio crescer.
+                lucrativos.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-lg">
-              Sua empresa precisa de IA, presença digital forte e processos automatizados — mas não quer contratar 3 fornecedores diferentes. Na RoboticsBr, você encontra tudo: consultoria em IA, gestão de mídias sociais e automação do processo criativo, em um único parceiro.
+              Modernizamos sua operação de ponta a ponta: análise de processos, automação inteligente, presença digital estratégica e acompanhamento contínuo — tudo com um único parceiro que entende seu negócio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/contact" className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1">
-                Agende Seu Diagnóstico Estratégico de IA
+                Quero meu Diagnóstico de Eficiência Gratuito
               </a>
-              <a href="#metodologia" className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold text-slate-700 hover:text-indigo-600 transition-colors group">
-                Como funciona
+              <a href="#metodologia" className="inline-flex justify-center items-center px-8 py-4 text-base font-semibold text-slate-700 hover:text-indigo-600 border border-slate-200 hover:border-indigo-200 rounded-full transition-all group">
+                Verificar Potencial de Modernização
                 <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -44,15 +44,15 @@ const Hero: React.FC = () => {
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-500 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>Primeiro agente IA em 10-15 dias</span>
+                <span>Primeiro resultado em 10-15 dias</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>Social media com IA integrada</span>
+                <span>Presença digital otimizada</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-500" />
-                <span>Processo criativo automatizado</span>
+                <span>Acompanhamento humano contínuo</span>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
                          <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                          <div className="w-3 h-3 rounded-full bg-green-400"></div>
                       </div>
-                      <div className="text-xs text-slate-400 font-mono">ai-agent.dashboard</div>
+                      <div className="text-xs text-slate-400 font-mono">painel.modernizacao</div>
                    </div>
 
                    <div className="flex-1 p-8 flex flex-col relative">
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
                             <div className="text-3xl font-extrabold text-slate-900 tracking-tight">+47% produtividade</div>
                          </div>
                          <div className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full flex items-center mb-1">
-                            IA ativa
+                            Otimizado
                          </div>
                       </div>
                    </div>
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
                          <Megaphone size={20} className="text-pink-500" />
                       </div>
                       <div>
-                         <div className="text-xs text-slate-400 font-semibold">Posts criados com IA</div>
+                         <div className="text-xs text-slate-400 font-semibold">Conteúdos publicados</div>
                          <div className="text-sm font-bold text-slate-900 flex items-center gap-1">
                             48/mês <span className="text-emerald-500 text-xs">↗</span>
                          </div>
