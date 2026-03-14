@@ -8,28 +8,28 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: 'Qual a diferença entre a RoboticsBr e uma agência de marketing tradicional?',
-    answer: 'Agências tradicionais focam em criativos e mídia paga, mas dependem de ferramentas prontas e não escrevem código. Nós unimos engenharia de software com estratégia de marketing — construímos sistemas personalizados, automações e dashboards de BI que agências simplesmente não conseguem entregar.',
+    question: 'Por que minha empresa precisa de IA agora?',
+    answer: 'O mercado está mudando rapidamente. Empresas que adotam IA ganham eficiência, reduzem custos operacionais e tomam decisões mais inteligentes. Quanto mais cedo você começar, maior será sua vantagem competitiva em relação a concorrentes que ainda dependem de processos manuais.',
   },
   {
-    question: 'Quanto tempo leva para ver resultados?',
-    answer: 'O setup inicial leva em média 7 dias úteis. Os primeiros resultados mensuráveis (aumento de conversão, redução de CAC) aparecem entre 30 e 90 dias, dependendo da complexidade do projeto e do volume de tráfego existente.',
+    question: 'Qual o custo de uma consultoria em IA?',
+    answer: 'Começamos com um Diagnóstico Estratégico de IA, que oferece um plano de ação claro e personalizado para sua empresa. Os projetos de implementação são modularizados para se adequar ao seu orçamento — você escolhe por onde começar e escala conforme os resultados aparecem.',
   },
   {
-    question: 'Vocês trabalham com empresas de qualquer tamanho?',
-    answer: 'Sim. Atendemos desde criadores de conteúdo individuais até empresas com faturamento de milhões. O que nos conecta aos nossos clientes é a ambição de escalar com inteligência — e não o tamanho atual do negócio.',
+    question: 'Quanto tempo leva para ver os resultados?',
+    answer: 'O primeiro agente de IA funcional pode ser entregue em 10 a 15 dias após o diagnóstico. Os resultados concretos (economia de tempo, redução de erros, aumento de produtividade) começam a aparecer já nas primeiras semanas de uso. Nosso foco é em quick wins e ROI rápido.',
   },
   {
-    question: 'Como funciona o diagnóstico gratuito?',
-    answer: 'Analisamos seu site, funis de venda, stack tecnológica e dados de marketing. Em uma reunião de 30 minutos, apresentamos um relatório com os principais gargalos e oportunidades de crescimento. Sem compromisso e sem custo.',
+    question: 'Minha equipe será treinada para usar a IA?',
+    answer: 'Sim, absolutamente. Nossa metodologia inclui o treinamento completo da sua equipe para garantir a adoção e o sucesso a longo prazo da solução implementada. Não entregamos ferramentas — entregamos capacidade.',
   },
   {
-    question: 'Quais tecnologias vocês utilizam?',
-    answer: 'Trabalhamos com React, Node.js, Python, TypeScript, bancos de dados SQL e NoSQL, integrações via API, ferramentas de BI (Google Analytics, Looker Studio) e plataformas de automação. Escolhemos a stack ideal para cada projeto — sem forçar uma solução genérica.',
+    question: 'O que acontece se a solução de IA não funcionar como esperado?',
+    answer: 'Nosso acompanhamento quinzenal permite identificar ajustes rapidamente. Oferecemos um processo contínuo de otimização para garantir que a solução esteja gerando o máximo valor para sua empresa. Trabalhamos até que o resultado esteja dentro das expectativas.',
   },
   {
-    question: 'Vocês oferecem suporte contínuo após a entrega?',
-    answer: 'Sim. Oferecemos planos de suporte e manutenção contínua com monitoramento 24/7, atualizações de segurança e otimizações recorrentes. Nosso objetivo é ser parceiro de longo prazo, não apenas um prestador de serviço pontual.',
+    question: 'Vocês oferecem acompanhamento após a implementação?',
+    answer: 'Sim. Realizamos reuniões quinzenais para monitorar o progresso, analisar métricas e garantir que a IA esteja gerando o máximo valor para sua empresa. Além disso, entregamos relatórios claros para que você acompanhe o retorno do investimento.',
   },
 ];
 
@@ -45,17 +45,17 @@ const FAQ: React.FC = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Perguntas frequentes
+            Perguntas frequentes sobre IA para empresas
           </h2>
           <p className="text-slate-600">
-            Tire suas dúvidas antes de dar o próximo passo.
+            Tire suas dúvidas antes de dar o próximo passo rumo à transformação digital.
           </p>
         </div>
 
         <div className="space-y-3">
           {faqItems.map((item, index) => (
             <div
-              key={index}
+              key={item.question}
               className="border border-slate-200 rounded-xl overflow-hidden transition-all duration-200 hover:border-slate-300"
             >
               <button

@@ -17,44 +17,44 @@ const Portfolio: React.FC = () => {
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
-      title: 'E-commerce de Alta Performance',
-      description: 'Aumento de 340% em conversão em 90 dias com arquitetura otimizada para picos de tráfego e integração de pagamentos.',
-      image: '/images/portfolio/ecommerce-1.jpg',
-      category: 'site'
+      title: 'Chatbot Inteligente para Clínica',
+      description: 'Redução de 60% nas ligações telefônicas com agente de IA para agendamento e dúvidas de pacientes.',
+      image: '/images/portfolio/chatbot-clinica.jpg',
+      category: 'sistema'
     },
     {
       id: 2,
-      title: 'Sistema de Gestão Empresarial',
-      description: 'Redução de 60% no tempo operacional com dashboard integrado para gestão de processos, vendas e equipes.',
-      image: '/images/portfolio/sistema-1.jpg',
+      title: 'Automação de Propostas Comerciais',
+      description: 'Ciclo de vendas reduzido pela metade com IA que gera propostas personalizadas em minutos.',
+      image: '/images/portfolio/automacao-propostas.jpg',
       category: 'sistema'
     },
     {
       id: 3,
-      title: 'Landing Page de Conversão',
-      description: 'Taxa de conversão de 8.2% — 3x acima da média do mercado — com A/B testing contínuo e copy estratégico.',
-      image: '/images/portfolio/landing-1.jpg',
-      category: 'site'
+      title: 'Dashboard de BI Inteligente',
+      description: 'Decisões 3x mais rápidas com dashboards inteligentes que consolidam dados de vendas, marketing e operações.',
+      image: '/images/portfolio/dashboard-bi.jpg',
+      category: 'sistema'
     },
     {
       id: 4,
-      title: 'CRM Personalizado',
-      description: 'Aumento de 45% no LTV do cliente com automação de follow-up e segmentação inteligente de leads.',
-      image: '/images/portfolio/crm-1.jpg',
+      title: 'Agente de Triagem de Documentos',
+      description: 'Economia de 30h semanais com IA que classifica, extrai e organiza documentos automaticamente.',
+      image: '/images/portfolio/triagem-docs.jpg',
       category: 'sistema'
     },
     {
       id: 5,
-      title: 'Site Institucional Moderno',
-      description: 'Nota 98/100 no PageSpeed e tempo de carregamento abaixo de 1.2s com design responsivo premium.',
-      image: '/images/portfolio/institucional-1.jpg',
-      category: 'site'
+      title: 'Automação de Atendimento ao Cliente',
+      description: '4 colaboradores liberados para atividades estratégicas com IA gerenciando o suporte de primeiro nível.',
+      image: '/images/portfolio/atendimento-ia.jpg',
+      category: 'sistema'
     },
     {
       id: 6,
-      title: 'Plataforma de Automação',
-      description: 'Economia de 120h/mês em tarefas manuais com workflows inteligentes e integrações via API.',
-      image: '/images/portfolio/automacao-1.jpg',
+      title: 'Integração de Sistemas com IA',
+      description: 'ERP, CRM e marketing conectados com workflows inteligentes que eliminam retrabalho e erros manuais.',
+      image: '/images/portfolio/integracao-ia.jpg',
       category: 'sistema'
     }
   ];
@@ -92,11 +92,10 @@ const Portfolio: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-            Nosso Portfólio
+            Resultados reais para empresas como a sua
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Transformamos ideias em realidade digital. Conheça alguns dos projetos que desenvolvemos, 
-            unindo tecnologia de ponta com estratégias de marketing que geram resultados reais para nossos clientes.
+            Na RoboticsBr, cada projeto de IA é uma oportunidade de transformar sua empresa. Desenvolvemos soluções personalizadas, automações inteligentes e estratégias de dados que geram resultados mensuráveis.
           </p>
         </div>
 
@@ -104,17 +103,15 @@ const Portfolio: React.FC = () => {
         <div className="mb-12 max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 rounded-2xl p-8 md:p-10 border border-slate-100">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Resultados que Falam por Si
+              IA que transforma negócios
             </h3>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Na RoboticsBr, cada projeto é uma oportunidade de criar algo extraordinário.{' '}
-              Desenvolvemos <strong>sites de alta conversão</strong>, <strong>sistemas personalizados</strong> e{' '}
-              <strong>plataformas de automação</strong> que não apenas impressionam visualmente, mas geram resultados mensuráveis.
+              Desenvolvemos <strong>soluções de IA personalizadas</strong>, <strong>automações inteligentes</strong> e{' '}
+              <strong>estratégias de dados</strong> que geram resultados mensuráveis: otimização de custos, aumento de eficiência e novas oportunidades de negócio para sua empresa.
             </p>
             <p className="text-slate-700 leading-relaxed">
-              Nossa abordagem única combina <strong>engenharia de software</strong> com{' '}
-              <strong>marketing estratégico</strong>, garantindo que cada solução seja otimizada para 
-              performance, conversão e crescimento sustentável. Veja abaixo alguns exemplos do nosso trabalho.
+              Nossa abordagem combina <strong>expertise técnica em IA</strong> com{' '}
+              <strong>profundo entendimento de negócios</strong>, garantindo que cada solução seja prática, escalável e com retorno rápido sobre o investimento.
             </p>
           </div>
         </div>
@@ -181,12 +178,8 @@ const Portfolio: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent flex flex-col justify-end">
                       <div className="p-6 md:p-8 text-white bg-slate-900/50 backdrop-blur-sm rounded-t-2xl">
                           <div className="flex items-center justify-between mb-3">
-                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            item.category === 'site' 
-                              ? 'bg-indigo-500/90 text-white' 
-                              : 'bg-purple-500/90 text-white'
-                          }`}>
-                            {item.category === 'site' ? 'Site' : 'Sistema'}
+                          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/90 text-white">
+                            {item.category === 'site' ? 'Site' : 'Solução de IA'}
                           </span>
                           <div className="flex items-center space-x-2 text-sm text-slate-200">
                             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
@@ -243,20 +236,20 @@ const Portfolio: React.FC = () => {
         {/* Estatísticas */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">50+</div>
-            <div className="text-slate-600">Projetos Entregues</div>
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">47%</div>
+            <div className="text-slate-600">Aumento em Produtividade</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">120h</div>
+            <div className="text-slate-600">Economizadas por Mês</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">15 dias</div>
+            <div className="text-slate-600">Para Primeiro Agente IA</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">98%</div>
-            <div className="text-slate-600">Taxa de Satisfação</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">200%</div>
-            <div className="text-slate-600">Aumento Médio em Conversão</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">24/7</div>
-            <div className="text-slate-600">Suporte Disponível</div>
+            <div className="text-slate-600">Satisfação dos Clientes</div>
           </div>
         </div>
       </div>

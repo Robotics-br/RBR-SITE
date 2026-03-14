@@ -14,72 +14,72 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Por que sua agência de marketing precisa de engenharia de software',
-    excerpt: 'Agências tradicionais dependem de ferramentas prontas. Descubra como a engenharia customizada pode triplicar seus resultados de conversão.',
-    category: 'Marketing + Tech',
+    title: 'Por que sua empresa precisa de IA agora — e não daqui a 2 anos',
+    excerpt: 'Empresas que adotam IA cedo ganham vantagem competitiva duradoura. Entenda por que esperar é o maior risco para pequenas e médias empresas.',
+    category: 'IA para empresas',
     readTime: '5 min',
     date: '2026-03-01',
     url: '#',
   },
   {
     id: 2,
-    title: 'CAC vs LTV: O guia definitivo para criadores de conteúdo',
-    excerpt: 'Entenda como equilibrar custo de aquisição e valor vitalício do cliente para monetizar sua audiência de forma sustentável.',
-    category: 'Growth',
+    title: 'Chatbots com IA: como empresas estão economizando 30+ horas por semana',
+    excerpt: 'Casos reais de como agentes inteligentes automatizam atendimento, agendamento e qualificação de leads sem perder a personalização.',
+    category: 'Automação',
     readTime: '7 min',
     date: '2026-02-20',
     url: '#',
   },
   {
     id: 3,
-    title: 'Tracking server-side: por que o Google Analytics sozinho não basta',
-    excerpt: 'Com as restrições de cookies e ad blockers, o tracking client-side perde até 30% dos dados. Veja como implementar uma solução server-side.',
-    category: 'Dados',
+    title: 'O guia prático do Diagnóstico de IA para pequenas empresas',
+    excerpt: 'Passo a passo de como identificar processos que podem ser automatizados e calcular o ROI antes de investir em soluções de IA.',
+    category: 'Metodologia',
     readTime: '6 min',
     date: '2026-02-10',
     url: '#',
   },
   {
     id: 4,
-    title: 'Automação de vendas para PMEs: comece com R$ 0 de investimento',
-    excerpt: 'Ferramentas gratuitas e estratégias práticas para automatizar seu funil de vendas mesmo sem orçamento para software enterprise.',
-    category: 'Automação',
+    title: 'n8n + IA: automação de processos sem código para sua empresa',
+    excerpt: 'Como usar ferramentas de automação low-code integradas com inteligência artificial para eliminar tarefas repetitivas na sua empresa.',
+    category: 'Tecnologia',
     readTime: '8 min',
     date: '2026-01-28',
     url: '#',
   },
   {
     id: 5,
-    title: 'React, Next.js ou Vite? Como escolher a stack certa para seu projeto',
-    excerpt: 'Comparativo técnico e de negócio entre as principais ferramentas de frontend para sites de alta conversão.',
-    category: 'Tecnologia',
-    readTime: '10 min',
+    title: 'LGPD e IA: o que sua empresa precisa saber antes de implementar',
+    excerpt: 'Guia de conformidade para usar IA com dados de clientes de forma segura, ética e em conformidade com a legislação brasileira.',
+    category: 'Conformidade',
+    readTime: '6 min',
     date: '2026-01-15',
     url: '#',
   },
   {
     id: 6,
-    title: 'Case: como levamos um e-commerce de R$ 50k para R$ 500k/mês',
-    excerpt: 'Estudo de caso detalhado com as estratégias de marketing e decisões técnicas que multiplicaram a receita em 10x.',
+    title: 'Case: como uma clínica reduziu 60% das ligações com agente de IA',
+    excerpt: 'Estudo de caso detalhado de como implementamos um chatbot inteligente para agendamento e dúvidas em uma clínica com 3 unidades.',
     category: 'Case Study',
-    readTime: '12 min',
+    readTime: '10 min',
     date: '2026-01-05',
     url: '#',
   },
 ];
 
 const categoryColors: Record<string, string> = {
-  'Marketing + Tech': 'bg-indigo-100 text-indigo-700',
-  'Growth': 'bg-purple-100 text-purple-700',
-  'Dados': 'bg-emerald-100 text-emerald-700',
-  'Automação': 'bg-orange-100 text-orange-700',
+  'IA para empresas': 'bg-indigo-100 text-indigo-700',
+  'Automação': 'bg-purple-100 text-purple-700',
+  'Metodologia': 'bg-emerald-100 text-emerald-700',
   'Tecnologia': 'bg-cyan-100 text-cyan-700',
+  'Conformidade': 'bg-orange-100 text-orange-700',
   'Case Study': 'bg-amber-100 text-amber-700',
 };
 
 const Blog: React.FC = () => {
   React.useEffect(() => {
-    document.title = 'Blog - RoboticsBr';
+    document.title = 'Blog - RoboticsBr | IA, Social Media e Automação';
     window.scrollTo(0, 0);
   }, []);
 
@@ -96,7 +96,7 @@ const Blog: React.FC = () => {
             Blog RoboticsBr
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Artigos sobre marketing, tecnologia e growth para quem quer crescer com inteligência.
+            Artigos sobre inteligência artificial, automação e transformação digital para empresas que querem crescer com inteligência.
           </p>
         </div>
 

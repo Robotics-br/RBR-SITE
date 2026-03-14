@@ -36,18 +36,16 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="/#solucoes" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Soluções</a>
-            <a href="/#creators" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Para Criadores</a>
-            <a href="/#empresas" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Para Empresas</a>
-            <a href="/#portfolio" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Portfólio</a>
+            <a href="/#metodologia" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Metodologia</a>
+            <a href="/#servicos" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Serviços</a>
+            <a href="/#portfolio" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Cases</a>
             <Link to="/sobre" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Sobre</Link>
-            <Link to="/equipe" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Equipe</Link>
             <Link to="/contact" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Contato</Link>
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/contact" className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
-              Receber Proposta em 24h
+              Diagnóstico Estratégico de IA
             </Link>
           </div>
 
@@ -67,14 +65,13 @@ const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl p-4 flex flex-col space-y-4">
           <a href="/#solucoes" className="text-base font-medium text-slate-600 py-2">Soluções</a>
-          <a href="/#creators" className="text-base font-medium text-slate-600 py-2">Para Criadores</a>
-          <a href="/#empresas" className="text-base font-medium text-slate-600 py-2">Para Empresas</a>
-          <a href="/#portfolio" className="text-base font-medium text-slate-600 py-2">Portfólio</a>
+          <a href="/#metodologia" className="text-base font-medium text-slate-600 py-2">Metodologia</a>
+          <a href="/#servicos" className="text-base font-medium text-slate-600 py-2">Serviços</a>
+          <a href="/#portfolio" className="text-base font-medium text-slate-600 py-2">Cases</a>
           <Link to="/sobre" className="text-base font-medium text-slate-600 py-2">Sobre</Link>
-          <Link to="/equipe" className="text-base font-medium text-slate-600 py-2">Equipe</Link>
           <Link to="/contact" className="text-base font-medium text-slate-600 py-2">Contato</Link>
           <Link to="/contact" className="w-full bg-indigo-600 text-white px-5 py-3 rounded-lg text-base font-bold text-center">
-            Receber Proposta em 24h
+            Diagnóstico Estratégico de IA
           </Link>
         </div>
       )}

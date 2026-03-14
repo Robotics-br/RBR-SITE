@@ -14,39 +14,39 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Mariana Costa',
-    role: 'CEO',
-    company: 'TechVerde',
-    text: 'A RoboticsBr transformou nosso e-commerce. Em 3 meses, triplicamos a taxa de conversão e finalmente temos dados confiáveis para tomar decisões. O time entende tanto de tecnologia quanto de vendas — algo que nunca encontrei em outras agências.',
+    name: 'Fernando Almeida',
+    role: 'Diretor de Operações',
+    company: 'Distribuidora Almeida',
+    text: 'Achávamos que IA era coisa de empresa grande. A RoboticsBr mostrou que estava ao nosso alcance. Em 3 semanas, automatizamos o atendimento ao cliente e liberamos 4 pessoas para atividades estratégicas. O ROI veio no primeiro mês.',
     rating: 5,
-    avatar: 'MC',
+    avatar: 'FA',
   },
   {
     id: 2,
-    name: 'Rafael Oliveira',
-    role: 'Diretor de Marketing',
-    company: 'Grupo Nexus',
-    text: 'Já contratamos 4 agências antes. A diferença é que a RoboticsBr entrega código que funciona E marketing que converte. Nosso CAC caiu 40% e o LTV subiu 65%. Resultado real, não PowerPoint bonito.',
+    name: 'Patrícia Gonçalves',
+    role: 'CEO',
+    company: 'PG Assessoria Contábil',
+    text: 'O processo de diagnóstico foi revelador — eles mapearam gargalos que nem sabíamos que existiam. O agente de IA que criaram para triagem de documentos economiza 30 horas por semana da nossa equipe. Atendimento excepcional e acompanhamento de verdade.',
     rating: 5,
-    avatar: 'RO',
+    avatar: 'PG',
   },
   {
     id: 3,
-    name: 'Camila Santos',
-    role: 'Criadora de Conteúdo',
-    company: '@camilasantos',
-    text: 'Como influenciadora, eu precisava monetizar minha audiência sem perder autenticidade. Eles criaram um sistema de vendas automatizado que roda sozinho. Minha receita recorrente cresceu 280% em 6 meses.',
+    name: 'Ricardo Torres',
+    role: 'Sócio-fundador',
+    company: 'Torres Engenharia',
+    text: 'Contratamos para automatizar propostas comerciais e orçamentos. O sistema de IA gera propostas personalizadas em minutos, não em dias. Nosso ciclo de vendas caiu pela metade e a taxa de conversão subiu 35%. Parceria que vale cada centavo.',
     rating: 5,
-    avatar: 'CS',
+    avatar: 'RT',
   },
   {
     id: 4,
-    name: 'Eduardo Mendes',
-    role: 'CTO',
-    company: 'Fintech Scale',
-    text: 'A integração entre o CRM, automação de marketing e nosso sistema interno ficou impecável. O time da RoboticsBr tem senioridade técnica real — não é aquele código colado do StackOverflow. Confiança total.',
+    name: 'Juliana Martins',
+    role: 'Gerente Comercial',
+    company: 'Clínica Vida Plena',
+    text: 'O chatbot inteligente que implementaram para agendamento e dúvidas dos pacientes transformou nossa recepção. Reduzimos em 60% as ligações telefônicas e os pacientes adoram a praticidade. O treinamento da equipe foi impecável.',
     rating: 5,
-    avatar: 'EM',
+    avatar: 'JM',
   },
 ];
 
@@ -71,7 +71,7 @@ const Testimonials: React.FC = () => {
             O que nossos clientes dizem
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Resultados reais de empresas e criadores que confiaram na RoboticsBr.
+            Empresas como a sua já estão colhendo os resultados da IA com nosso acompanhamento.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
           <div className="relative z-10">
             <div className="flex gap-1 mb-6">
               {Array.from({ length: current.rating }).map((_, i) => (
-                <Star key={i} size={18} className="text-amber-400" fill="currentColor" />
+                <Star key={`star-${current.id}-${i}`} size={18} className="text-amber-400" fill="currentColor" />
               ))}
             </div>
 
