@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5516999999999';
+const WHATSAPP_NUMBER = '5516992967484';
 const DEFAULT_MESSAGE = 'Olá! Vim pelo site da RoboticsBr e gostaria de saber mais sobre modernização e automação para minha empresa.';
 
 const WhatsAppButton: React.FC = () => {
