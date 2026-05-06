@@ -6,9 +6,9 @@ Este documento define as cores, tipografia e padrões visuais do site institucio
 
 ## 1. Paleta de cores
 
-### 1.1 Cores de marca (Tailwind config — `index.html`)
+### 1.1 Cores de marca (Tailwind config — `src/app/globals.css`)
 
-As cores de destaque são definidas em `tailwind.config` no `index.html`:
+As cores de destaque são definidas no `@theme` em `src/app/globals.css`:
 
 | Nome       | Classe / Uso              | Hex       | Uso principal                          |
 |------------|----------------------------|-----------|----------------------------------------|

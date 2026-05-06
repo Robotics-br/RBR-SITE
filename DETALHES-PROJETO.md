@@ -67,40 +67,34 @@ Métricas exibidas: 50+ projetos entregues, 98% taxa de satisfação, 200% aumen
 
 | Tecnologia | Versão | Uso |
 |------------|--------|-----|
-| **TypeScript** | ~5.8.2 | Linguagem principal, target ES2022, módulo ESNext, JSX React |
+| **TypeScript** | ~5.8.2 | Linguagem principal |
 | **React** | ^19.2.3 | UI reativa |
-| **React DOM** | ^19.2.3 | Renderização no browser |
-| **Vite** | ^6.2.0 | Build e dev server, HMR, porta 3000 |
-| **React Router DOM** | ^7.11.0 | Roteamento SPA |
+| **React DOM** | ^19.2.3 | Renderização |
+| **Next.js** | ^15.3.0 | Framework SSR/SSG com App Router |
 
 ### 3.2 Dependências principais
 
 - **lucide-react** (^0.561.0): ícones SVG.
+- **tailwindcss** (^4.2.1): estilização utility-first.
+- **@tailwindcss/postcss** (^4.2.1): processamento CSS.
 
-### 3.3 Desenvolvimento
+### 3.3 Estilização
 
-- **@vitejs/plugin-react** (^5.0.0): plugin React para Vite  
-- **@types/node** (^22.14.0): tipos TypeScript para Node.js  
+- **Tailwind CSS 4**: via PostCSS, com tema customizado em `src/app/globals.css` (`@theme`).
+- Cores da marca: indigo (`#4f46e5`), purple (`#9333ea`), orange (`#fb923c`).
 
-### 3.4 Estilização
+### 3.4 Configuração TypeScript (tsconfig.json)
 
-- **Tailwind CSS**: via CDN, utility-first, com cores customizadas da marca (ex.: `brand-blue`, `brand-purple`, `brand-teal` no `index.html`).
-
-### 3.5 Configuração TypeScript (tsconfig.json)
-
-- Target: ES2022  
+- Target: ES2017  
 - Module: ESNext  
-- JSX: react-jsx  
-- Alias `@/*` para raiz do projeto  
+- JSX: preserve (Next.js)  
+- Alias `@/*` → `./src/*`  
 - `moduleResolution`: bundler  
 
-### 3.6 Configuração Vite (vite.config.ts)
+### 3.5 Configuração Next.js (next.config.ts)
 
-- Porta: **3000**  
-- Host: **0.0.0.0**  
-- Plugin: React  
-- Alias: `@` → raiz do projeto  
-- Variáveis de ambiente: `GEMINI_API_KEY` (opcional)  
+- Redirects: `/contact` → `/contato` (301)  
+- Porta padrão: **3000**  
 
 ---
 
@@ -108,52 +102,68 @@ Métricas exibidas: 50+ projetos entregues, 98% taxa de satisfação, 200% aumen
 
 ### 4.1 Nome do pacote (package.json)
 
-- **name**: `roboticsbr-landing-page`  
+- **name**: `roboticsbr-site`  
 - **private**: true  
-- **type**: module  
 
 ### 4.2 Arquivos raiz
 
 | Arquivo | Função |
 |---------|--------|
-| `App.tsx` | Componente raiz: Router, Navbar, Routes, Footer |
-| `index.tsx` | Ponto de entrada da aplicação |
-| `index.html` | HTML base e configuração Tailwind (CDN) |
-| `vite.config.ts` | Configuração do Vite |
+| `next.config.ts` | Configuração Next.js (redirects) |
+| `postcss.config.mjs` | Configuração PostCSS/Tailwind |
 | `tsconfig.json` | Configuração TypeScript |
 | `package.json` | Dependências e scripts |
 
-### 4.3 Componentes (pasta `components/`)
+### 4.3 Componentes (pasta `src/components/`)
 
 | Componente | Descrição |
 |------------|-----------|
 | `Navbar.tsx` | Menu de navegação (sticky, glassmorphism) |
 | `Hero.tsx` | Seção principal / hero |
-| `Home.tsx` | Página inicial (agrupa seções da home) |
-| `About.tsx` | Página "Sobre" |
-| `Team.tsx` | Página "Equipe" |
-| `Contact.tsx` | Página "Contato" |
 | `Footer.tsx` | Rodapé com links e informações |
 | `Logo.tsx` | Logo reutilizável com fallback |
-| `Portfolio.tsx` | Portfólio (carrossel, auto-play) |
+| `Portfolio.tsx` | Portfólio (carrossel com links para cases) |
+| `TeamCarousel.tsx` | Carrossel 3D da equipe |
 | `TechPillars.tsx` | Pilares tecnológicos |
-| `SolutionHybrid.tsx` | Solução híbrida (TI + Marketing) |
-| `SocialProof.tsx` | Prova social |
-| `AudienceSegments.tsx` | Segmentos de audiência (criadores / empresas) |
+| `SolutionHybrid.tsx` | Solução híbrida |
+| `SocialProof.tsx` | Prova social com métricas |
+| `AudienceSegments.tsx` | Ecossistema completo |
+| `Methodology.tsx` | Metodologia em 3 fases |
+| `Expertise.tsx` | Expertise e tecnologias |
+| `Testimonials.tsx` | Depoimentos de clientes |
+| `FAQ.tsx` | Perguntas frequentes |
+| `CTASection.tsx` | Call-to-action final |
+| `AnimatedSection.tsx` | Wrapper de animação scroll |
 
-### 4.4 Rotas (App.tsx)
+### 4.4 Rotas (App Router — `src/app/`)
 
-| Rota | Componente | Página |
-|------|------------|--------|
-| `/` | `Home` | Página inicial |
-| `/sobre` | `About` | Sobre a empresa |
-| `/equipe` | `Team` | Equipe |
-| `/contact` | `Contact` | Contato |
+| Rota | Página |
+|------|--------|
+| `/` | Página inicial |
+| `/sobre` | Sobre a empresa |
+| `/equipe` | Equipe |
+| `/contato` | Contato |
+| `/blog` | Listagem de posts |
+| `/blog/[slug]` | Post individual |
+| `/cases` | Listagem de cases |
+| `/cases/[slug]` | Case individual |
+| `/servicos` | Página geral de serviços |
+| `/servicos/clinicas` | Automação para clínicas |
+| `/servicos/distribuidoras` | Automação para distribuidoras |
+| `/servicos/escritorios` | Automação para escritórios |
 
-### 4.5 Assets (public)
+### 4.5 Dados (pasta `src/data/`)
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| `cases.ts` | 6 cases de sucesso com storytelling completo |
+| `blog.ts` | 3 posts otimizados para SEO |
+
+### 4.6 Assets (public)
 
 - **Logo**: `public/images/logo-roboticsbr.png`  
 - **Portfólio**: `public/images/portfolio/`  
+- **Equipe**: `public/team/` (eng.png, social.png, arch.png, cs.png)  
 
 ---
 
@@ -164,13 +174,14 @@ Métricas exibidas: 50+ projetos entregues, 98% taxa de satisfação, 200% aumen
 | Comando | Ação |
 |---------|------|
 | `npm run dev` | Servidor de desenvolvimento (http://localhost:3000) |
-| `npm run build` | Build de produção (saída em `dist`) |
-| `npm run preview` | Preview local da build de produção |
+| `npm run build` | Build de produção (SSG/SSR) |
+| `npm start` | Servidor de produção |
+| `npm run lint` | Linting com Next.js |
 
 ### 5.2 Pré-requisitos
 
-- **Node.js**: 20.19.0+ (recomendado 22.12.0+)  
-- **npm**: 10.5.2+  
+- **Node.js**: 18+  
+- **npm**: 9+  
 
 ### 5.3 Instalação
 
