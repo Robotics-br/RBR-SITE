@@ -10,10 +10,10 @@ Este documento define as cores, tipografia e padrões visuais do site institucio
 
 As cores de destaque são definidas no `@theme` em `src/app/globals.css`:
 
-| Nome       | Classe / Uso              | Hex       | Uso principal                          |
-|------------|----------------------------|-----------|----------------------------------------|
-| **Indigo** | `accent.start` / indigo-600 | `#4f46e5` | Tecnologia, Criadores, CTAs primários  |
-| **Purple** | `accent.mid` / purple-600   | `#9333ea` | Empresas, segundo destaque            |
+| Nome       | Classe / Uso                | Hex       | Uso principal                             |
+| ---------- | --------------------------- | --------- | ----------------------------------------- |
+| **Indigo** | `accent.start` / indigo-600 | `#4f46e5` | Tecnologia, Criadores, CTAs primários     |
+| **Purple** | `accent.mid` / purple-600   | `#9333ea` | Empresas, segundo destaque                |
 | **Orange** | `accent.end` / orange-400   | `#fb923c` | Growth, alertas suaves, terceiro destaque |
 
 **Gradiente principal (marca):**
@@ -27,10 +27,10 @@ As cores de destaque são definidas no `@theme` em `src/app/globals.css`:
 
 ### 1.2 Cor de fundo principal
 
-| Uso              | Valor     | Classe Tailwind   |
-|------------------|-----------|--------------------|
-| Fundo da página  | `#f6f9fc` | `bg-[#f6f9fc]`     |
-| Body (fallback)  | `#ffffff` | Definido em `<style>` no HTML |
+| Uso             | Valor     | Classe Tailwind               |
+| --------------- | --------- | ----------------------------- |
+| Fundo da página | `#f6f9fc` | `bg-[#f6f9fc]`                |
+| Body (fallback) | `#ffffff` | Definido em `<style>` no HTML |
 
 **Regra:** Use `#f6f9fc` para seções alternadas e fundo geral; use `bg-white` para cards e blocos de conteúdo sobre fundo claro.
 
@@ -38,27 +38,27 @@ As cores de destaque são definidas no `@theme` em `src/app/globals.css`:
 
 Texto e superfícies neutras usam a escala **Slate** do Tailwind:
 
-| Uso                 | Classe        | Quando usar                          |
-|---------------------|---------------|--------------------------------------|
-| Títulos principais  | `text-slate-900` | Headings (h1, h2, h3)              |
-| Texto corpo         | `text-slate-600` | Parágrafos, descrições              |
-| Texto secundário    | `text-slate-500` | Legendas, footer, metadados        |
-| Texto discreto      | `text-slate-400` | Labels, placeholders                |
-| Fundos suaves       | `bg-slate-50`    | Cards, seções alternadas            |
-| Bordas leves        | `border-slate-100`, `border-slate-200` | Contornos de cards, divisórias |
-| Slate escuro custom | `slate-850` (#1e293b) | Definido no theme.extend (se necessário) |
+| Uso                 | Classe                                 | Quando usar                              |
+| ------------------- | -------------------------------------- | ---------------------------------------- |
+| Títulos principais  | `text-slate-900`                       | Headings (h1, h2, h3)                    |
+| Texto corpo         | `text-slate-600`                       | Parágrafos, descrições                   |
+| Texto secundário    | `text-slate-500`                       | Legendas, footer, metadados              |
+| Texto discreto      | `text-slate-400`                       | Labels, placeholders                     |
+| Fundos suaves       | `bg-slate-50`                          | Cards, seções alternadas                 |
+| Bordas leves        | `border-slate-100`, `border-slate-200` | Contornos de cards, divisórias           |
+| Slate escuro custom | `slate-850` (#1e293b)                  | Definido no theme.extend (se necessário) |
 
 **Regra:** Evite preto puro (`#000`); prefira `slate-900` para contraste legível.
 
 ### 1.4 Semântica por segmento
 
-| Segmento / Conceito   | Cor principal   | Fundo suave      | Uso no site                    |
-|-----------------------|-----------------|------------------|---------------------------------|
-| Criadores / Tech      | `indigo-600`    | `indigo-50`, `indigo-100` | Cards "Para Criadores", ícones, links |
-| Empresas              | `purple-600`    | `purple-50`, `purple-100` | Cards "Para Empresas", pilares       |
-| Growth / Destaque     | `orange-500`/`orange-600` | `orange-100` | Growth Marketing, alertas, terceiro pilar |
-| Erro / Negativo       | `red-400`/`red-600` | `red-100`   | Listas de "problemas" (✕)           |
-| Sucesso / Confirmação | `emerald-500`  | —                | Checkmarks (ex.: "Setup em 7 dias")  |
+| Segmento / Conceito   | Cor principal             | Fundo suave               | Uso no site                               |
+| --------------------- | ------------------------- | ------------------------- | ----------------------------------------- |
+| Criadores / Tech      | `indigo-600`              | `indigo-50`, `indigo-100` | Cards "Para Criadores", ícones, links     |
+| Empresas              | `purple-600`              | `purple-50`, `purple-100` | Cards "Para Empresas", pilares            |
+| Growth / Destaque     | `orange-500`/`orange-600` | `orange-100`              | Growth Marketing, alertas, terceiro pilar |
+| Erro / Negativo       | `red-400`/`red-600`       | `red-100`                 | Listas de "problemas" (✕)                 |
+| Sucesso / Confirmação | `emerald-500`             | —                         | Checkmarks (ex.: "Setup em 7 dias")       |
 
 ---
 
@@ -71,22 +71,22 @@ Texto e superfícies neutras usam a escala **Slate** do Tailwind:
 
 ### 2.2 Pesos e usos
 
-| Peso        | Classe           | Uso típico                          |
-|-------------|------------------|-------------------------------------|
-| Regular     | `font-normal` (400) | Corpo de texto                    |
-| Medium      | `font-medium` (500) | Links, labels                     |
-| Semibold    | `font-semibold` (600) | Subtítulos, CTAs secundários    |
-| Bold        | `font-bold` (700)    | Títulos de card, nomes           |
-| Extrabold   | `font-extrabold` (800) | Hero, títulos de página        |
+| Peso      | Classe                 | Uso típico                   |
+| --------- | ---------------------- | ---------------------------- |
+| Regular   | `font-normal` (400)    | Corpo de texto               |
+| Medium    | `font-medium` (500)    | Links, labels                |
+| Semibold  | `font-semibold` (600)  | Subtítulos, CTAs secundários |
+| Bold      | `font-bold` (700)      | Títulos de card, nomes       |
+| Extrabold | `font-extrabold` (800) | Hero, títulos de página      |
 
 ### 2.3 Tamanhos de título
 
-| Elemento | Classe típica | Observação                    |
-|----------|----------------|-------------------------------|
-| Hero (h1) | `text-4xl md:text-5xl lg:text-6xl` ou `lg:text-7xl` | `font-extrabold`, `tracking-tight` |
-| Título de seção (h2) | `text-3xl md:text-4xl font-bold` | `text-slate-900` |
-| Título de card (h3) | `text-xl` ou `text-2xl font-bold` | `text-slate-900` |
-| Subtítulo / h4 | `text-lg` ou `text-xl font-bold` | Conforme hierarquia |
+| Elemento             | Classe típica                                       | Observação                         |
+| -------------------- | --------------------------------------------------- | ---------------------------------- |
+| Hero (h1)            | `text-4xl md:text-5xl lg:text-6xl` ou `lg:text-7xl` | `font-extrabold`, `tracking-tight` |
+| Título de seção (h2) | `text-3xl md:text-4xl font-bold`                    | `text-slate-900`                   |
+| Título de card (h3)  | `text-xl` ou `text-2xl font-bold`                   | `text-slate-900`                   |
+| Subtítulo / h4       | `text-lg` ou `text-xl font-bold`                    | Conforme hierarquia                |
 
 ### 2.4 Corpo e parágrafos
 
@@ -105,12 +105,12 @@ Texto e superfícies neutras usam a escala **Slate** do Tailwind:
 
 ### 3.2 Espaçamento vertical de seções
 
-| Tipo de seção | Classe típica     | Uso                    |
-|---------------|-------------------|------------------------|
-| Seção padrão  | `py-24`           | Blocos principais      |
-| Hero          | `pt-32 pb-20 lg:pt-40 lg:pb-32` ou similar | Primeira dobra      |
-| Rodapé / CTA  | `py-16` a `py-20` | Seções de fechamento   |
-| Cards internos | `p-6` a `p-8` ou `p-8 md:p-12` | Conteúdo dentro de card |
+| Tipo de seção  | Classe típica                              | Uso                     |
+| -------------- | ------------------------------------------ | ----------------------- |
+| Seção padrão   | `py-24`                                    | Blocos principais       |
+| Hero           | `pt-32 pb-20 lg:pt-40 lg:pb-32` ou similar | Primeira dobra          |
+| Rodapé / CTA   | `py-16` a `py-20`                          | Seções de fechamento    |
+| Cards internos | `p-6` a `p-8` ou `p-8 md:p-12`             | Conteúdo dentro de card |
 
 ### 3.3 Grid
 
@@ -239,4 +239,4 @@ Texto e superfícies neutras usam a escala **Slate** do Tailwind:
 
 ---
 
-*Documento de referência do projeto RBR-SITE. Para alterar cores globais, edite `tailwind.config` em `index.html` e mantenha este arquivo atualizado.*
+_Documento de referencia do projeto RBR-SITE. Para alterar cores globais, edite o bloco `@theme` em `src/app/globals.css` e mantenha este arquivo atualizado._

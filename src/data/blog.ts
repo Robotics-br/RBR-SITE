@@ -6,9 +6,14 @@ export interface BlogPost {
   content: string;
   category: string;
   readTime: string;
+  /** ISO date YYYY-MM-DD - publication */
   date: string;
+  /** ISO date YYYY-MM-DD - last update; defaults to `date` when absent */
+  updatedAt?: string;
   author: string;
   keywords: string[];
+  /** Optional alt for cover image (when added) */
+  coverAlt?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -16,7 +21,8 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     slug: 'como-automatizar-atendimento-clinica',
     title: 'Como automatizar o atendimento da sua clínica sem contratar um técnico',
-    excerpt: 'Guia prático para clínicas que querem reduzir ligações, automatizar agendamentos e melhorar a experiência dos pacientes com IA.',
+    excerpt:
+      'Guia prático para clínicas que querem reduzir ligações, automatizar agendamentos e melhorar a experiência dos pacientes com IA.',
     content: `
 ## O problema que toda clínica conhece
 
@@ -66,13 +72,19 @@ A Clínica Vida Plena implementou essa solução e em 3 semanas já via resultad
     readTime: '7 min',
     date: '2026-04-15',
     author: 'RoboticsBr',
-    keywords: ['automatizar atendimento clínica', 'automação para clínicas médicas', 'chatbot clínica', 'agendamento automatizado'],
+    keywords: [
+      'automatizar atendimento clínica',
+      'automação para clínicas médicas',
+      'chatbot clínica',
+      'agendamento automatizado',
+    ],
   },
   {
     id: 2,
     slug: 'n8n-para-empresas-guia-pratico',
     title: 'N8n para empresas: guia prático de automação sem código',
-    excerpt: 'Entenda como o n8n pode conectar seus sistemas, automatizar tarefas repetitivas e economizar horas da sua equipe — sem precisar programar.',
+    excerpt:
+      'Entenda como o n8n pode conectar seus sistemas, automatizar tarefas repetitivas e economizar horas da sua equipe — sem precisar programar.',
     content: `
 ## O que é o n8n e por que empresas estão adotando
 
@@ -133,13 +145,19 @@ O n8n faz sentido quando:
     readTime: '8 min',
     date: '2026-04-01',
     author: 'RoboticsBr',
-    keywords: ['n8n para empresas', 'automação sem código', 'n8n vs zapier', 'automação de processos para PME'],
+    keywords: [
+      'n8n para empresas',
+      'automação sem código',
+      'n8n vs zapier',
+      'automação de processos para PME',
+    ],
   },
   {
     id: 3,
     slug: 'dashboard-bi-pequenas-empresas',
     title: 'Dashboard de BI para pequenas empresas: por onde começar',
-    excerpt: 'Descubra como montar um dashboard de Business Intelligence que transforma dados em decisões — mesmo com orçamento limitado.',
+    excerpt:
+      'Descubra como montar um dashboard de Business Intelligence que transforma dados em decisões — mesmo com orçamento limitado.',
     content: `
 ## Por que sua empresa precisa de um dashboard de BI
 
@@ -208,10 +226,15 @@ A Distribuidora Almeida tinha dados em 6 sistemas diferentes. Após implementar 
     readTime: '9 min',
     date: '2026-03-15',
     author: 'RoboticsBr',
-    keywords: ['dashboard de BI para pequenas empresas', 'business intelligence PME', 'dashboard de dados', 'modernização digital empresas'],
+    keywords: [
+      'dashboard de BI para pequenas empresas',
+      'business intelligence PME',
+      'dashboard de dados',
+      'modernização digital empresas',
+    ],
   },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find(p => p.slug === slug);
+  return blogPosts.find((p) => p.slug === slug);
 }

@@ -1,60 +1,57 @@
 # Product Requirements Document (PRD) - RoboticsBr Site Institucional
 
-## 1. Visão Geral do Produto
-O site da **RoboticsBr** é uma plataforma institucional high-end que serve como o principal ponto de contato e conversão para a empresa. A RoboticsBr posiciona-se como uma empresa híbrida que une **Tecnologia (Engenharia de Software)** e **Marketing (Estratégia Digital)** para escalar negócios e criadores de conteúdo.
+> Documento atualizado em 2026 para refletir a stack atual (Next.js 15 + App Router). Versoes anteriores citavam Vite, mas o projeto migrou.
+
+## 1. Visao Geral do Produto
+O site da **RoboticsBr** e uma plataforma institucional high-end que serve como o principal ponto de contato e conversao para a empresa. A RoboticsBr posiciona-se como uma empresa hibrida que une **Tecnologia (Engenharia de Software)** e **Marketing (Estrategia Digital)** para escalar negocios e criadores de conteudo.
 
 - **Slogan**: Suas ideias, marketing e tecnologia gerando resultados.
-- **Missão**: Eliminar as barreiras entre T.I. e Marketing, fornecendo uma infraestrutura completa de crescimento.
+- **Missao**: Eliminar as barreiras entre T.I. e Marketing, fornecendo uma infraestrutura completa de crescimento.
 
-## 2. Público-Alvo da Empresa
+## 2. Publico-Alvo da Empresa
 O projeto foca em dois segmentos principais:
-1.  **Criadores & Influencers**: Indivíduos com grandes comunidades que precisam de tecnologia invisível (CRM, automação, BI) para monetizar sua audiência.
-2.  **Empresas em Escala**: Negócios que buscam performance baseada em engenharia e ROI real através de sistemas web robustos e marketing orientado a dados.
+1. **Criadores & Influencers**: Individuos com grandes comunidades que precisam de tecnologia invisivel (CRM, automacao, BI) para monetizar sua audiencia.
+2. **Empresas em Escala**: Negocios que buscam performance baseada em engenharia e ROI real atraves de sistemas web robustos e marketing orientado a dados.
 
 ## 3. Proposta de Valor
-A RoboticsBr resolve os problemas comuns encontrados em agências tradicionais (falta de conhecimento técnico) e fábricas de software (falta de visão comercial):
-- **Desenvolvimento High-End**: Foco 100% em conversão e estabilidade, sem templates prontos.
-- **Inteligência de Dados (BI)**: Decisões baseadas em números reais com rastreamento avançado server-side.
-- **Growth Marketing**: Funis de vendas otimizados por tecnologia e testes A/B contínuos.
+A RoboticsBr resolve os problemas comuns encontrados em agencias tradicionais (falta de conhecimento tecnico) e fabricas de software (falta de visao comercial):
+- **Desenvolvimento High-End**: Foco 100% em conversao e estabilidade, sem templates prontos.
+- **Inteligencia de Dados (BI)**: Decisoes baseadas em numeros reais com rastreamento avancado server-side.
+- **Growth Marketing**: Funis de vendas otimizados por tecnologia e testes A/B continuos.
 
-## 4. Requisitos de Funcionalidades (Páginas e Seções)
+## 4. Requisitos de Funcionalidades (Paginas e Secoes)
 
 ### 4.1. Home Page
-- **Hero Section**: Impacto visual imediato com copywriting focado em escala e resultados. Inclui CTA principal "Quero Escalar Agora".
-- **Social Proof**: Seção para validação e autoridade (Logos de parceiros/clientes).
-- **Solution Hybrid**: Explicação visual da união entre TI e Marketing.
-- **Audience Segments**: Divisão clara entre soluções para Creators e Empresas.
-- **Tech Pillars**: Explicação dos três pilares: Desenvolvimento, BI e Growth.
-- **Portfolio**: Carrossel dinâmico exibindo projetos realizados.
+- **Hero Section**: Impacto visual imediato com copywriting focado em escala e resultados. Inclui CTA principal "Quero meu Diagnostico de Eficiencia Gratuito".
+- **Social Proof**: Secao para validacao e autoridade (metricas e prova social).
+- **Solution Hybrid**: Explicacao visual da uniao entre TI e Marketing.
+- **Audience Segments**: Divisao clara entre solucoes para Creators e Empresas.
+- **Tech Pillars**: Explicacao dos quatro pilares: Automacao, Social, BI e Growth.
+- **Portfolio**: Carrossel dinamico exibindo cases.
 
-### 4.2. Sobre (About)
-- Detalhamento da metodologia e filosofia da empresa.
+### 4.2. Sobre, Equipe, Contato, Blog, Cases e Servicos
+- Paginas dedicadas com SEO e JSON-LD por tipo de conteudo.
+- Servicos por nicho: clinicas, distribuidoras, escritorios.
 
-### 4.3. Equipe (Team)
-- Apresentação dos profissionais por trás da tecnologia e estratégia.
+## 5. Requisitos Nao Funcionais
 
-### 4.4. Contato (Contact)
-- Formulário de captura de leads e informações de contato direto.
-
-## 5. Requisitos Não Funcionais
-
-### 5.1. Tech Stack
-- **Frontend**: React 19.2.3, Vite, TypeScript.
-- **Estilização**: Tailwind CSS (customizado com cores da marca), Lucide React para ícones.
-- **Motion Design**: Uso de animações suaves e transições para experiência premium.
-- **Infraestrutura**: Compatibilidade total com Vercel para deploy contínuo.
+### 5.1. Tech Stack atual
+- **Frontend**: React 19, Next.js 15 (App Router), TypeScript 5.8.
+- **Estilizacao**: Tailwind CSS 4 (PostCSS), Lucide React para icones.
+- **Tipografia**: Inter via `next/font/google`.
+- **Infraestrutura**: Compatibilidade total com Vercel para deploy continuo.
 
 ### 5.2. Design e UX/UI
-- **Aesthetics**: Glassmorphism, gradientes suaves (Stripe-style), sombras profundas e tipografia moderna (Inter/Sans-serif).
-- **Responsividade**: Mobile-first, garantindo que a experiência seja impecável em todos os dispositivos.
-- **Performance**: Carregamento rápido (Vite) e otimização de ativos.
+- **Aesthetics**: Glassmorphism, gradientes suaves (Stripe-style), sombras profundas e tipografia moderna (Inter).
+- **Responsividade**: Mobile-first.
+- **Performance**: SSG, lazy loading, `next/image` (AVIF/WebP), `next/font` para carregamento otimizado.
 
-## 6. Fluxos de Conversão
-1.  **Primário**: "Quero Escalar Agora" -> Redirecionamento para contato/formulário.
-2.  **Secundário**: "Entenda como funciona" -> Scroll para a seção de soluções.
-3.  **Segmentado**: CTAs específicos para Creators e Empresas.
+## 6. Fluxos de Conversao
+1. **Primario**: "Quero meu Diagnostico de Eficiencia Gratuito" -> formulario em `/contato`.
+2. **Secundario**: "Verificar Potencial de Modernizacao" -> scroll para `/metodologia`.
+3. **Segmentado**: CTAs especificos para cada nicho em `/servicos/{clinicas|distribuidoras|escritorios}`.
 
-## 7. Métricas de Sucesso (KPIs)
-- **Taxa de Conversão**: Percentual de visitantes que entram em contato.
-- **Tempo Médio na Página**: Engajamento com o conteúdo de valor.
-- **Performance (Lighthouse)**: Score acima de 90 em Performance e SEO.
+## 7. Metricas de Sucesso (KPIs)
+- **Taxa de Conversao**: Percentual de visitantes que entram em contato.
+- **Tempo Medio na Pagina**: Engajamento com o conteudo de valor.
+- **Performance (Lighthouse)**: Score acima de 90 em Performance, SEO, Accessibility e Best Practices.

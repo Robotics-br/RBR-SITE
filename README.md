@@ -54,21 +54,31 @@ RBR-SITE/
 
 ## Pré-requisitos
 
-- **Node.js**: Versão 18 ou superior
-- **npm**: Versão 9 ou superior
+- **Node.js**: Versão 20 ou superior
+- **npm**: Versão 10 ou superior
 
 ## Instalação
 
 1. Clone o repositório:
+
 ```bash
 git clone <repository-url>
 cd RBR-SITE
 ```
 
 2. Instale as dependências:
+
 ```bash
 npm install
 ```
+
+3. Copie o template de variáveis de ambiente:
+
+```bash
+cp .env.example .env.local
+```
+
+Edite `.env.local` com seus valores reais (Formspree, WhatsApp, GA4 opcional).
 
 ## Executando o Projeto
 
@@ -96,20 +106,20 @@ npm start
 
 ### URLs Geradas
 
-| Página | URL |
-|--------|-----|
-| Home | `/` |
-| Sobre | `/sobre` |
-| Equipe | `/equipe` |
-| Contato | `/contato` |
-| Blog | `/blog` |
-| Cases | `/cases` |
-| Serviços | `/servicos` |
-| Automação para Clínicas | `/servicos/clinicas` |
+| Página                        | URL                        |
+| ----------------------------- | -------------------------- |
+| Home                          | `/`                        |
+| Sobre                         | `/sobre`                   |
+| Equipe                        | `/equipe`                  |
+| Contato                       | `/contato`                 |
+| Blog                          | `/blog`                    |
+| Cases                         | `/cases`                   |
+| Serviços                      | `/servicos`                |
+| Automação para Clínicas       | `/servicos/clinicas`       |
 | Automação para Distribuidoras | `/servicos/distribuidoras` |
-| Automação para Escritórios | `/servicos/escritorios` |
-| Cases individuais (6) | `/cases/[slug]` |
-| Blog posts (3) | `/blog/[slug]` |
+| Automação para Escritórios    | `/servicos/escritorios`    |
+| Cases individuais (6)         | `/cases/[slug]`            |
+| Blog posts (3)                | `/blog/[slug]`             |
 
 ### SEO Implementado
 

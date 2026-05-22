@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'automação para escritórios',
     'RoboticsBr',
   ],
+  alternates: { canonical: 'https://www.roboticsbr.com/servicos' },
   openGraph: {
     title: 'Serviços de Automação e Modernização Digital | RoboticsBr',
     description:
@@ -55,41 +56,48 @@ const verticals = [
 
 export default function ServicosPage() {
   return (
-    <div className="pt-24 pb-20 bg-[#f6f9fc] min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
-            <span className="text-xs font-bold tracking-wide uppercase text-indigo-600">Nossos serviços</span>
+    <div className="min-h-screen bg-[#f6f9fc] pt-24 pb-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <div className="mb-6 inline-flex items-center space-x-2 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1">
+            <span className="text-xs font-bold tracking-wide text-indigo-600 uppercase">
+              Nossos serviços
+            </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+          <h1 className="mb-4 text-4xl font-extrabold text-slate-900 md:text-5xl">
             Serviços de Automação e Modernização Digital
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Cada segmento tem gargalos diferentes. Escolha o seu e veja como a RoboticsBr combina integrações, dados
-            e fluxos inteligentes para ganhar eficiência com suporte humano de ponta a ponta.
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
+            Cada segmento tem gargalos diferentes. Escolha o seu e veja como a RoboticsBr combina
+            integrações, dados e fluxos inteligentes para ganhar eficiência com suporte humano de
+            ponta a ponta.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {verticals.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col p-8"
+                className="group flex transform flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div
-                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 border border-slate-100`}
+                  className={`h-14 w-14 rounded-2xl bg-gradient-to-br ${item.gradient} mb-6 flex items-center justify-center border border-slate-100`}
                 >
-                  <Icon className="w-7 h-7 text-slate-800" aria-hidden />
+                  <Icon className="h-7 w-7 text-slate-800" aria-hidden />
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 mb-2">{item.badge}</span>
-                <h2 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                <span className="mb-2 text-xs font-semibold tracking-wide text-indigo-600 uppercase">
+                  {item.badge}
+                </span>
+                <h2 className="mb-3 text-xl font-bold text-slate-900 transition-colors group-hover:text-indigo-600">
                   {item.title}
                 </h2>
-                <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-6">{item.description}</p>
-                <span className="text-indigo-600 text-sm font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-slate-600">
+                  {item.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-indigo-600 transition-transform group-hover:translate-x-1">
                   Ver detalhes
                   <ArrowRight size={16} />
                 </span>
@@ -98,14 +106,17 @@ export default function ServicosPage() {
           })}
         </div>
 
-        <div className="bg-slate-900 rounded-2xl p-8 md:p-10 text-center text-white">
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Não encontrou o seu segmento?</h2>
-          <p className="text-indigo-200 max-w-xl mx-auto mb-8">
-            Conte o desafio da sua operação — desenhamos automações modulares alinhadas ao seu processo e orçamento.
+        <div className="rounded-2xl bg-slate-900 p-8 text-center text-white md:p-10">
+          <h2 className="mb-3 text-2xl font-extrabold md:text-3xl">
+            Não encontrou o seu segmento?
+          </h2>
+          <p className="mx-auto mb-8 max-w-xl text-indigo-200">
+            Conte o desafio da sua operação — desenhamos automações modulares alinhadas ao seu
+            processo e orçamento.
           </p>
           <Link
             href="/contato"
-            className="inline-flex items-center px-8 py-4 text-base font-bold rounded-full bg-indigo-600 hover:bg-indigo-500 text-white transition-all shadow-lg hover:shadow-indigo-500/30"
+            className="inline-flex items-center rounded-full bg-indigo-600 px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-indigo-500 hover:shadow-indigo-500/30"
           >
             Falar com especialista
             <ArrowRight size={18} className="ml-2" />

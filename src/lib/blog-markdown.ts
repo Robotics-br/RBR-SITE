@@ -1,12 +1,9 @@
 function processInline(text: string): string {
-  let s = text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+  let s = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(
     /\[([^\]]+)]\(([^)]+)\)/g,
-    '<a href="$2" class="text-indigo-600 font-semibold underline-offset-2 hover:underline">$1</a>',
+    '<a href="$2" class="text-indigo-600 font-semibold underline-offset-2 hover:underline">$1</a>'
   );
   return s;
 }
@@ -29,7 +26,10 @@ function parseTable(lines: string[], startIdx: number): { html: string; nextIdx:
       .map((c) => c.trim());
 
   const headerCells = splitRow(rowLines[0]);
-  const bodyRows = rowLines.slice(2).map(splitRow).filter((r) => r.length > 0);
+  const bodyRows = rowLines
+    .slice(2)
+    .map(splitRow)
+    .filter((r) => r.length > 0);
 
   let html =
     '<div class="overflow-x-auto my-6"><table class="min-w-full text-sm border border-slate-200 rounded-xl overflow-hidden">';
@@ -58,7 +58,8 @@ export function markdownToHtml(md: string): string {
   const flushParagraph = (acc: string[]) => {
     if (acc.length === 0) return;
     const joined = acc.join(' ').trim();
-    if (joined) blocks.push(`<p class="text-slate-700 leading-relaxed my-4">${processInline(joined)}</p>`);
+    if (joined)
+      blocks.push(`<p class="text-slate-700 leading-relaxed my-4">${processInline(joined)}</p>`);
     acc.length = 0;
   };
 
@@ -84,7 +85,7 @@ export function markdownToHtml(md: string): string {
     if (t.startsWith('## ') && !t.startsWith('###')) {
       flushParagraph(paraAcc);
       blocks.push(
-        `<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-10 mb-4 scroll-mt-28">${processInline(t.slice(3))}</h2>`,
+        `<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-10 mb-4 scroll-mt-28">${processInline(t.slice(3))}</h2>`
       );
       i++;
       continue;
@@ -93,7 +94,7 @@ export function markdownToHtml(md: string): string {
     if (t.startsWith('### ')) {
       flushParagraph(paraAcc);
       blocks.push(
-        `<h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-8 mb-3 scroll-mt-28">${processInline(t.slice(4))}</h3>`,
+        `<h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-8 mb-3 scroll-mt-28">${processInline(t.slice(4))}</h3>`
       );
       i++;
       continue;

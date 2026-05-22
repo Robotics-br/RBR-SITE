@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { cases, getCaseBySlug, getRelatedCases } from '@/data/cases';
@@ -53,47 +54,48 @@ export default async function CaseStudyPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="pt-24 pb-20 bg-white min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/cases" className="inline-flex items-center text-sm text-slate-500 hover:text-indigo-600 mb-8 transition-colors">
+      <article className="min-h-screen bg-white pt-24 pb-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/cases"
+            className="mb-8 inline-flex items-center text-sm text-slate-500 transition-colors hover:text-indigo-600"
+          >
             <ArrowLeft size={16} className="mr-2" />
             Voltar para cases
           </Link>
 
           <div className="mb-8">
-            <div className="flex flex-wrap gap-3 mb-4">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">
+            <div className="mb-4 flex flex-wrap gap-3">
+              <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
                 {caseStudy.industry}
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
                 {caseStudy.client}
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
+            <h1 className="mb-4 text-3xl leading-tight font-extrabold text-slate-900 md:text-5xl">
               {caseStudy.title}
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              {caseStudy.shortDescription}
-            </p>
+            <p className="text-xl leading-relaxed text-slate-600">{caseStudy.shortDescription}</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-slate-500 mb-1">
+          <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-4">
+              <div className="mb-1 flex items-center gap-2 text-slate-500">
                 <Clock size={14} />
                 <span className="text-xs font-semibold uppercase">Duração</span>
               </div>
               <p className="text-lg font-bold text-slate-900">{caseStudy.duration}</p>
             </div>
-            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-slate-500 mb-1">
+            <div className="rounded-xl border border-slate-100 bg-slate-50 p-4">
+              <div className="mb-1 flex items-center gap-2 text-slate-500">
                 <Users size={14} />
                 <span className="text-xs font-semibold uppercase">Setor</span>
               </div>
               <p className="text-lg font-bold text-slate-900">{caseStudy.industry}</p>
             </div>
-            <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2 text-slate-500 mb-1">
+            <div className="col-span-2 rounded-xl border border-slate-100 bg-slate-50 p-4 md:col-span-1">
+              <div className="mb-1 flex items-center gap-2 text-slate-500">
                 <CheckCircle2 size={14} />
                 <span className="text-xs font-semibold uppercase">Status</span>
               </div>
@@ -101,36 +103,39 @@ export default async function CaseStudyPage({ params }: Props) {
             </div>
           </div>
 
-          <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-12 bg-slate-100">
-            <img
+          <div className="relative mb-12 h-64 overflow-hidden rounded-2xl bg-slate-100 md:h-96">
+            <Image
               src={caseStudy.image}
               alt={caseStudy.title}
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 896px"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20" />
           </div>
 
-          <div className="prose prose-slate max-w-none mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">O Desafio</h2>
-            <p className="text-slate-600 leading-relaxed text-lg mb-8">{caseStudy.problem}</p>
+          <div className="prose prose-slate mb-12 max-w-none">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">O Desafio</h2>
+            <p className="mb-8 text-lg leading-relaxed text-slate-600">{caseStudy.problem}</p>
 
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">A Solução</h2>
-            <p className="text-slate-600 leading-relaxed text-lg mb-8">{caseStudy.solution}</p>
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">A Solução</h2>
+            <p className="mb-8 text-lg leading-relaxed text-slate-600">{caseStudy.solution}</p>
 
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Resultados</h2>
-            <ul className="space-y-3 mb-8">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Resultados</h2>
+            <ul className="mb-8 space-y-3">
               {caseStudy.results.map((result) => (
                 <li key={result} className="flex items-start gap-3">
-                  <CheckCircle2 size={20} className="text-emerald-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700 text-lg">{result}</span>
+                  <CheckCircle2 size={20} className="mt-0.5 flex-shrink-0 text-emerald-500" />
+                  <span className="text-lg text-slate-700">{result}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {caseStudy.testimonial && (
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 mb-12 border border-indigo-100">
-              <blockquote className="text-lg text-slate-700 leading-relaxed mb-4 italic">
+            <div className="mb-12 rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 to-purple-50 p-8">
+              <blockquote className="mb-4 text-lg leading-relaxed text-slate-700 italic">
                 &ldquo;{caseStudy.testimonial.text}&rdquo;
               </blockquote>
               <p className="text-sm font-bold text-slate-900">{caseStudy.testimonial.author}</p>
@@ -139,20 +144,28 @@ export default async function CaseStudyPage({ params }: Props) {
           )}
 
           <div className="mb-12">
-            <h3 className="text-lg font-bold text-slate-900 mb-4">Tecnologias utilizadas</h3>
+            <h3 className="mb-4 text-lg font-bold text-slate-900">Tecnologias utilizadas</h3>
             <div className="flex flex-wrap gap-2">
               {caseStudy.technologies.map((tech) => (
-                <span key={tech} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">
+                <span
+                  key={tech}
+                  className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700"
+                >
                   {tech}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="bg-slate-900 rounded-2xl p-8 text-center text-white mb-16">
-            <h3 className="text-2xl font-bold mb-4">Quer resultados similares na sua empresa?</h3>
-            <p className="text-indigo-200 mb-6">Agende um diagnóstico gratuito e descubra o potencial de automação do seu negócio.</p>
-            <Link href="/contato" className="inline-flex items-center px-8 py-4 text-base font-bold rounded-full bg-indigo-600 hover:bg-indigo-500 text-white transition-all">
+          <div className="mb-16 rounded-2xl bg-slate-900 p-8 text-center text-white">
+            <h3 className="mb-4 text-2xl font-bold">Quer resultados similares na sua empresa?</h3>
+            <p className="mb-6 text-indigo-200">
+              Agende um diagnóstico gratuito e descubra o potencial de automação do seu negócio.
+            </p>
+            <Link
+              href="/contato"
+              className="inline-flex items-center rounded-full bg-indigo-600 px-8 py-4 text-base font-bold text-white transition-all hover:bg-indigo-500"
+            >
               Agendar Diagnóstico Gratuito
               <ArrowRight size={18} className="ml-2" />
             </Link>
@@ -160,19 +173,23 @@ export default async function CaseStudyPage({ params }: Props) {
 
           {relatedCases.length > 0 && (
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Cases relacionados</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h3 className="mb-6 text-2xl font-bold text-slate-900">Cases relacionados</h3>
+              <div className="grid gap-6 md:grid-cols-3">
                 {relatedCases.map((rc) => (
                   <Link
                     key={rc.id}
                     href={`/cases/${rc.slug}`}
-                    className="group bg-slate-50 rounded-xl p-5 border border-slate-100 hover:shadow-md transition-all"
+                    className="group rounded-xl border border-slate-100 bg-slate-50 p-5 transition-all hover:shadow-md"
                   >
-                    <span className="text-xs font-semibold text-indigo-600 uppercase">{rc.industry}</span>
-                    <h4 className="text-base font-bold text-slate-900 mt-2 group-hover:text-indigo-600 transition-colors">
+                    <span className="text-xs font-semibold text-indigo-600 uppercase">
+                      {rc.industry}
+                    </span>
+                    <h4 className="mt-2 text-base font-bold text-slate-900 transition-colors group-hover:text-indigo-600">
                       {rc.title}
                     </h4>
-                    <p className="text-sm text-slate-500 mt-2 line-clamp-2">{rc.shortDescription}</p>
+                    <p className="mt-2 line-clamp-2 text-sm text-slate-500">
+                      {rc.shortDescription}
+                    </p>
                   </Link>
                 ))}
               </div>

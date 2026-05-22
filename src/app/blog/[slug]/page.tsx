@@ -30,9 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function formatDate(iso: string): string {
   try {
-    return new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }).format(
-      new Date(iso + 'T12:00:00'),
-    );
+    return new Intl.DateTimeFormat('pt-BR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+    }).format(new Date(iso + 'T12:00:00'));
   } catch {
     return iso;
   }
@@ -89,27 +91,35 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-      <section className="pt-28 pb-8 md:pt-32 md:pb-10 bg-gradient-to-b from-slate-900 to-indigo-950 text-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-indigo-200 mb-6 flex flex-wrap items-center gap-1" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
+      <section className="bg-gradient-to-b from-slate-900 to-indigo-950 pt-28 pb-8 text-white md:pt-32 md:pb-10">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <nav
+            className="mb-6 flex flex-wrap items-center gap-1 text-sm text-indigo-200"
+            aria-label="Breadcrumb"
+          >
+            <Link href="/" className="transition-colors hover:text-white">
               Home
             </Link>
-            <ChevronRight size={14} className="text-indigo-400 shrink-0 mx-0.5" aria-hidden />
-            <Link href="/blog" className="hover:text-white transition-colors">
+            <ChevronRight size={14} className="mx-0.5 shrink-0 text-indigo-400" aria-hidden />
+            <Link href="/blog" className="transition-colors hover:text-white">
               Blog
             </Link>
-            <ChevronRight size={14} className="text-indigo-400 shrink-0 mx-0.5" aria-hidden />
-            <span className="text-white font-medium line-clamp-2">{post.title}</span>
+            <ChevronRight size={14} className="mx-0.5 shrink-0 text-indigo-400" aria-hidden />
+            <span className="line-clamp-2 font-medium text-white">{post.title}</span>
           </nav>
           <span
             className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ring-1 ring-inset ${categoryClass(post.category)} bg-opacity-90`}
           >
             {post.category}
           </span>
-          <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">{post.title}</h1>
+          <h1 className="mt-4 text-3xl leading-tight font-extrabold md:text-4xl lg:text-5xl">
+            {post.title}
+          </h1>
           <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-indigo-200">
             <span className="inline-flex items-center gap-2">
               <Calendar size={16} />
@@ -123,35 +133,35 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      <article className="py-10 md:py-14 bg-[#f6f9fc]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article className="bg-[#f6f9fc] py-10 md:py-14">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div
-            className="rounded-2xl bg-white border border-slate-100 shadow-sm p-6 md:p-10 lg:p-12 prose-custom [&_a]:text-indigo-600 [&_strong]:text-slate-900"
+            className="prose-custom rounded-2xl border border-slate-100 bg-white p-6 shadow-sm md:p-10 lg:p-12 [&_a]:text-indigo-600 [&_strong]:text-slate-900"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
       </article>
 
       {related.length > 0 && (
-        <section className="pb-16 md:pb-20 bg-[#f6f9fc] border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-extrabold text-slate-900 mb-8">Relacionados</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+        <section className="border-t border-slate-100 bg-[#f6f9fc] pb-16 md:pb-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-8 text-2xl font-extrabold text-slate-900">Relacionados</h2>
+            <div className="grid gap-6 md:grid-cols-3">
               {related.map((p) => (
                 <Link
                   key={p.id}
                   href={`/blog/${p.slug}`}
-                  className="rounded-2xl bg-white border border-slate-100 p-6 hover:border-indigo-200 hover:shadow-md transition-all block group"
+                  className="group block rounded-2xl border border-slate-100 bg-white p-6 transition-all hover:border-indigo-200 hover:shadow-md"
                 >
                   <span
-                    className={`inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ring-1 ring-inset ${categoryClass(p.category)}`}
+                    className={`inline-flex rounded-full px-2.5 py-0.5 text-[10px] font-bold tracking-wide uppercase ring-1 ring-inset ${categoryClass(p.category)}`}
                   >
                     {p.category}
                   </span>
-                  <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
+                  <h3 className="mt-3 text-lg leading-snug font-bold text-slate-900 transition-colors group-hover:text-indigo-700">
                     {p.title}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-600 line-clamp-2">{p.excerpt}</p>
+                  <p className="mt-2 line-clamp-2 text-sm text-slate-600">{p.excerpt}</p>
                 </Link>
               ))}
             </div>

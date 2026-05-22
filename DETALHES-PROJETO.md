@@ -1,26 +1,24 @@
 # Detalhes do Projeto RBR-SITE
 
-Documento de referência com a visão geral do negócio, do site institucional e da estrutura técnica do repositório.
+Documento de referencia com a visao geral do negocio, do site institucional e da estrutura tecnica do repositorio.
+
+> Atualizado em 2026 para refletir a stack atual (Next.js 15 + App Router). Versoes anteriores citavam Vite e GitHub Pages.
 
 ---
 
-## 1. Visão geral
+## 1. Visao geral
 
-### 1.1 O que é o RoboticsBr
+### 1.1 O que e a RoboticsBr
 
-**RoboticsBr** é uma empresa de **Marketing e Tecnologia** cujo site oficial está em:
+**RoboticsBr** e uma empresa de **Marketing e Tecnologia** cujo site oficial esta em **https://www.roboticsbr.com/**.
 
-**https://www.roboticsbr.com/**
+Slogan: _"Suas ideias, marketing e tecnologia gerando resultados."_
 
-Slogan:
+A empresa se posiciona como **infraestrutura de crescimento** para criadores e empresas, unindo **engenharia de software** e **estrategia digital** para gerar receita recorrente.
 
-> *"Suas ideias, marketing e tecnologia gerando resultados."*
+### 1.2 O que e este repositorio (RBR-SITE)
 
-A empresa se posiciona como **infraestrutura de crescimento** para criadores e empresas, unindo **engenharia de software** e **estratégia digital** para gerar receita recorrente.
-
-### 1.2 O que é este repositório (RBR-SITE)
-
-Este repositório contém o **código-fonte do site institucional** da RoboticsBr. Ou seja, é a aplicação web que serve o conteúdo do endereço acima: apresentação da empresa, serviços, portfólio e captação de leads.
+Este repositorio contem o **codigo-fonte do site institucional** da RoboticsBr. E a aplicacao web que serve o conteudo do enderco acima: apresentacao da empresa, servicos, portfolio e captacao de leads.
 
 ---
 
@@ -28,174 +26,183 @@ Este repositório contém o **código-fonte do site institucional** da RoboticsB
 
 ### 2.1 Proposta de valor da RoboticsBr
 
-- **Quebra de silos**: une TI e Marketing em um único provedor — "agências não entendem de código; fábricas de software não entendem de vendas".
-- **Públicos-alvo**:
-  - **Criadores e influenciadores**: CRM, automação de vendas e análise de dados para monetizar audiência.
-  - **Empresas em escala**: integração do ecossistema de vendas com desenvolvimento e campanhas com ROI mensurável.
+- **Quebra de silos**: une TI e Marketing em um unico provedor.
+- **Publicos-alvo**:
+  - **Criadores e influenciadores**: CRM, automacao de vendas e analise de dados.
+  - **Empresas em escala**: integracao do ecossistema de vendas com desenvolvimento e campanhas.
 
-### 2.2 Pilares de atuação (conteúdo do site)
+### 2.2 Pilares de atuacao
 
-| Pilar | Descrição |
-|-------|-----------|
-| **Desenvolvimento High-End** | Sistemas web, PWAs e arquiteturas de vendas focadas em conversão e estabilidade, inclusive em picos de tráfego. |
-| **Inteligência de Dados (BI)** | Tracking server-side, dashboards de BI e decisões de marketing baseadas em dados. |
-| **Growth Marketing** | Tráfego pago, funil de vendas, A/B testing e automações para aumentar LTV e reduzir CAC. |
+| Pilar                                    | Descricao                                                                       |
+| ---------------------------------------- | ------------------------------------------------------------------------------- |
+| **Automacao de Processos**               | Fluxos inteligentes em n8n, IA e integracoes para eliminar tarefas repetitivas. |
+| **Gestao Estrategica de Midias Sociais** | Planejamento, conteudo, calendario editorial e performance.                     |
+| **Inteligencia de Dados (BI)**           | Tracking, dashboards e analise de metricas para decisoes baseadas em dados.     |
+| **Growth e Otimizacao**                  | Funis de vendas otimizados, testes A/B continuos e automacoes que aumentam LTV. |
 
-### 2.3 Diferenciais apresentados no site
+### 2.3 Diferenciais
 
-- Setup em 7 dias  
-- Suporte dedicado  
-- Fim da barreira entre T.I. e Marketing  
-- Uma plataforma para múltiplos perfis (criadores e empresas)
+- Diagnostico de Eficiencia em ate 7 dias
+- Primeiro resultado concreto em 10-15 dias
+- Suporte humano dedicado e acompanhamento quinzenal
+- Plataforma para multiplos perfis (criadores e empresas)
 
-### 2.4 Portfólio (tipos de projeto citados)
+### 2.4 Portfolio (cases publicados)
 
-- E-commerce de alta performance  
-- Sistema de gestão empresarial  
-- Landing page de conversão  
-- CRM personalizado  
-- Site institucional moderno  
-- Plataforma de automação  
+Sao 6 cases publicos em `/cases`, cobrindo automacao em saude, distribuicao, contabilidade, engenharia e tecnologia.
 
-Métricas exibidas: 50+ projetos entregues, 98% taxa de satisfação, 200% aumento médio em conversão, suporte 24/7.
+Metricas exibidas: 47% aumento medio em produtividade, 120h economizadas/mes, 15 dias para primeiro resultado, 98% de satisfacao.
 
 ---
 
-## 3. Stack técnica
+## 3. Stack tecnica
 
 ### 3.1 Linguagens e frameworks
 
-| Tecnologia | Versão | Uso |
-|------------|--------|-----|
-| **TypeScript** | ~5.8.2 | Linguagem principal |
-| **React** | ^19.2.3 | UI reativa |
-| **React DOM** | ^19.2.3 | Renderização |
-| **Next.js** | ^15.3.0 | Framework SSR/SSG com App Router |
+| Tecnologia     | Versao | Uso                              |
+| -------------- | ------ | -------------------------------- |
+| **TypeScript** | ~5.8   | Linguagem principal              |
+| **React**      | ^19.2  | UI reativa                       |
+| **Next.js**    | ^15.3  | Framework SSR/SSG com App Router |
 
-### 3.2 Dependências principais
+### 3.2 Dependencias principais
 
-- **lucide-react** (^0.561.0): ícones SVG.
-- **tailwindcss** (^4.2.1): estilização utility-first.
-- **@tailwindcss/postcss** (^4.2.1): processamento CSS.
+- **lucide-react** (^0.561): icones SVG.
+- **tailwindcss** (^4.2): estilizacao utility-first.
+- **@tailwindcss/postcss**: processamento CSS.
 
-### 3.3 Estilização
+### 3.3 Estilizacao
 
 - **Tailwind CSS 4**: via PostCSS, com tema customizado em `src/app/globals.css` (`@theme`).
 - Cores da marca: indigo (`#4f46e5`), purple (`#9333ea`), orange (`#fb923c`).
 
-### 3.4 Configuração TypeScript (tsconfig.json)
+### 3.4 Configuracao TypeScript (tsconfig.json)
 
-- Target: ES2017  
-- Module: ESNext  
-- JSX: preserve (Next.js)  
-- Alias `@/*` → `./src/*`  
-- `moduleResolution`: bundler  
+- Target: ES2017
+- Module: ESNext
+- JSX: preserve (Next.js)
+- Alias `@/*` -> `./src/*`
+- `moduleResolution`: bundler
 
-### 3.5 Configuração Next.js (next.config.ts)
+### 3.5 Configuracao Next.js (next.config.ts)
 
-- Redirects: `/contact` → `/contato` (301)  
-- Porta padrão: **3000**  
+- Redirects: `/contact` -> `/contato` (301)
+- Imagens: AVIF + WebP
+- Porta padrao: **3000**
 
 ---
 
 ## 4. Estrutura do projeto
 
-### 4.1 Nome do pacote (package.json)
+### 4.1 Nome do pacote
 
-- **name**: `roboticsbr-site`  
-- **private**: true  
+- **name**: `roboticsbr-site`
+- **private**: true
 
 ### 4.2 Arquivos raiz
 
-| Arquivo | Função |
-|---------|--------|
-| `next.config.ts` | Configuração Next.js (redirects) |
-| `postcss.config.mjs` | Configuração PostCSS/Tailwind |
-| `tsconfig.json` | Configuração TypeScript |
-| `package.json` | Dependências e scripts |
+| Arquivo              | Funcao                             |
+| -------------------- | ---------------------------------- |
+| `next.config.ts`     | Configuracao Next.js               |
+| `postcss.config.mjs` | Configuracao PostCSS/Tailwind      |
+| `tsconfig.json`      | Configuracao TypeScript            |
+| `package.json`       | Dependencias e scripts             |
+| `vercel.json`        | Headers de seguranca para a Vercel |
+| `.env.example`       | Template de variaveis de ambiente  |
 
-### 4.3 Componentes (pasta `src/components/`)
+### 4.3 Componentes (`src/components/`)
 
-| Componente | Descrição |
-|------------|-----------|
-| `Navbar.tsx` | Menu de navegação (sticky, glassmorphism) |
-| `Hero.tsx` | Seção principal / hero |
-| `Footer.tsx` | Rodapé com links e informações |
-| `Logo.tsx` | Logo reutilizável com fallback |
-| `Portfolio.tsx` | Portfólio (carrossel com links para cases) |
-| `TeamCarousel.tsx` | Carrossel 3D da equipe |
-| `TechPillars.tsx` | Pilares tecnológicos |
-| `SolutionHybrid.tsx` | Solução híbrida |
-| `SocialProof.tsx` | Prova social com métricas |
-| `AudienceSegments.tsx` | Ecossistema completo |
-| `Methodology.tsx` | Metodologia em 3 fases |
-| `Expertise.tsx` | Expertise e tecnologias |
-| `Testimonials.tsx` | Depoimentos de clientes |
-| `FAQ.tsx` | Perguntas frequentes |
-| `CTASection.tsx` | Call-to-action final |
-| `AnimatedSection.tsx` | Wrapper de animação scroll |
+| Componente             | Descricao                                         |
+| ---------------------- | ------------------------------------------------- |
+| `Navbar.tsx`           | Menu fixo com glassmorphism, focus trap no mobile |
+| `Hero.tsx`             | Secao principal                                   |
+| `Footer.tsx`           | Rodape com links, redes sociais e legais          |
+| `Logo.tsx`             | Logo reutilizavel com fallback textual            |
+| `Portfolio.tsx`        | Carrossel de cases                                |
+| `TeamCarousel.tsx`     | Carrossel 3D da equipe acessivel                  |
+| `TechPillars.tsx`      | Pilares tecnologicos                              |
+| `SolutionHybrid.tsx`   | Antes vs depois                                   |
+| `SocialProof.tsx`      | Metricas                                          |
+| `AudienceSegments.tsx` | Quatro pilares do ecossistema                     |
+| `Methodology.tsx`      | Metodologia em 3 fases                            |
+| `Expertise.tsx`        | Capacidades e tecnologias                         |
+| `Testimonials.tsx`     | Depoimentos                                       |
+| `FAQ.tsx`              | Perguntas frequentes (com FAQPage JSON-LD)        |
+| `CTASection.tsx`       | CTA final                                         |
+| `AnimatedSection.tsx`  | Wrapper de animacao com suporte a reduced motion  |
+| `CookieBanner.tsx`     | Consentimento (Google Consent Mode v2)            |
+| `ScrollProgress.tsx`   | Barra de progresso de scroll                      |
+| `WhatsAppButton.tsx`   | CTA flutuante                                     |
 
-### 4.4 Rotas (App Router — `src/app/`)
+### 4.4 Rotas (`src/app/`)
 
-| Rota | Página |
-|------|--------|
-| `/` | Página inicial |
-| `/sobre` | Sobre a empresa |
-| `/equipe` | Equipe |
-| `/contato` | Contato |
-| `/blog` | Listagem de posts |
-| `/blog/[slug]` | Post individual |
-| `/cases` | Listagem de cases |
-| `/cases/[slug]` | Case individual |
-| `/servicos` | Página geral de serviços |
-| `/servicos/clinicas` | Automação para clínicas |
-| `/servicos/distribuidoras` | Automação para distribuidoras |
-| `/servicos/escritorios` | Automação para escritórios |
+| Rota                       | Pagina                 |
+| -------------------------- | ---------------------- |
+| `/`                        | Pagina inicial         |
+| `/sobre`                   | Sobre a empresa        |
+| `/equipe`                  | Equipe                 |
+| `/contato`                 | Contato                |
+| `/blog` e `/blog/[slug]`   | Blog                   |
+| `/cases` e `/cases/[slug]` | Cases                  |
+| `/servicos`                | Lista de servicos      |
+| `/servicos/clinicas`       | Saude                  |
+| `/servicos/distribuidoras` | Distribuicao           |
+| `/servicos/escritorios`    | Servicos profissionais |
+| `/politica-de-privacidade` | LGPD                   |
+| `/termos-de-uso`           | Termos                 |
 
-### 4.5 Dados (pasta `src/data/`)
+### 4.5 Dados (`src/data/`)
 
-| Arquivo | Conteúdo |
-|---------|----------|
-| `cases.ts` | 6 cases de sucesso com storytelling completo |
-| `blog.ts` | 3 posts otimizados para SEO |
+| Arquivo    | Conteudo                    |
+| ---------- | --------------------------- |
+| `cases.ts` | 6 cases de sucesso          |
+| `blog.ts`  | 3 posts otimizados para SEO |
 
 ### 4.6 Assets (public)
 
-- **Logo**: `public/images/logo-roboticsbr.png`  
-- **Portfólio**: `public/images/portfolio/`  
-- **Equipe**: `public/team/` (eng.png, social.png, arch.png, cs.png)  
+- **Logo**: `public/images/logo-roboticsbr.png`
+- **Portfolio**: `public/images/portfolio/{chatbot-clinica,automacao-propostas,dashboard-bi,triagem-docs,atendimento-ia,integracao-ia}.jpg`
+- **Equipe**: `public/team/{eng,social,arch,cs}.png`
+- **Manifest e icones**: `public/manifest.webmanifest` (gerado automaticamente)
 
 ---
 
-## 5. Scripts e execução
+## 5. Scripts e execucao
 
 ### 5.1 Scripts npm
 
-| Comando | Ação |
-|---------|------|
-| `npm run dev` | Servidor de desenvolvimento (http://localhost:3000) |
-| `npm run build` | Build de produção (SSG/SSR) |
-| `npm start` | Servidor de produção |
-| `npm run lint` | Linting com Next.js |
+| Comando             | Acao                                                |
+| ------------------- | --------------------------------------------------- |
+| `npm run dev`       | Servidor de desenvolvimento (http://localhost:3000) |
+| `npm run build`     | Build de producao                                   |
+| `npm start`         | Servidor de producao                                |
+| `npm run lint`      | Linting com ESLint flat                             |
+| `npm test`          | Suite Vitest                                        |
+| `npm run typecheck` | `tsc --noEmit`                                      |
 
-### 5.2 Pré-requisitos
+### 5.2 Pre-requisitos
 
-- **Node.js**: 18+  
-- **npm**: 9+  
+- **Node.js**: 20+ recomendado
+- **npm**: 10+
 
-### 5.3 Instalação
+### 5.3 Instalacao
 
 ```bash
 git clone <repository-url>
 cd RBR-SITE
-npm install --legacy-peer-deps
+npm install
+cp .env.example .env.local
+# Edite .env.local com seus valores
 ```
 
-### 5.4 Variáveis de ambiente (opcional)
+### 5.4 Variaveis de ambiente
 
-Arquivo `.env.local` (ou equivalente) para uso opcional de API (ex.: Gemini):
+Veja `.env.example`:
 
-- `GEMINI_API_KEY` — chave da API Gemini, se utilizada no projeto.
+- `NEXT_PUBLIC_FORMSPREE_ENDPOINT` - endpoint Formspree para o form de contato.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` - numero do WhatsApp comercial (so digitos).
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` - GA4, opcional, ativado apos consentimento.
+- `NEXT_PUBLIC_SITE_URL` - URL canonica.
 
 ---
 
@@ -203,41 +210,40 @@ Arquivo `.env.local` (ou equivalente) para uso opcional de API (ex.: Gemini):
 
 ### 6.1 Vercel (recomendado)
 
-- Build command: `npm run build`  
-- Output directory: `dist`  
-- Deploy via Git (GitHub/GitLab/Bitbucket), CLI (`vercel`) ou dashboard.
+- Build command: `npm run build`
+- Output directory: `.next`
+- Deploy via Git ou CLI (`vercel`).
 
-### 6.2 Outras opções
+### 6.2 Outras opcoes
 
-- **Netlify**: conexão via Git ou upload  
-- **GitHub Pages**: configuração no repositório  
-- **Servidor próprio**: upload da pasta `dist` (ex.: FTP)  
+Qualquer host com runtime Node 20+ que suporte Next.js standalone (Railway, Render, AWS, etc.).
 
 ---
 
-## 7. Recursos e práticas do site
+## 7. Recursos do site
 
-- **Motion design**: animações e transições  
-- **Responsivo**: layout adaptável a diferentes dispositivos  
-- **Performance**: Vite, lazy loading quando aplicável  
-- **CRO**: foco em conversão (copy e estrutura de páginas)  
-- **UX/UI**: design moderno com Tailwind e componentes reutilizáveis  
-
----
-
-## 8. Licença e créditos
-
-- © 2024 RoboticsBr. Todos os direitos reservados.  
-- Desenvolvido com: Motion Design, CRO, copywriting estratégico e UX/UI moderna.  
+- **Acessibilidade**: WCAG AA (skip-link, focus trap, aria-live, prefers-reduced-motion).
+- **SEO**: JSON-LD Organization, LocalBusiness, FAQPage, BlogPosting; sitemap dinamico; canonical URLs.
+- **Performance**: SSG por rota, `next/image`, `next/font`, AVIF/WebP.
+- **Privacidade**: Cookie consent com Google Consent Mode v2 e paginas legais.
+- **Conversao**: CTAs segmentados, WhatsApp flutuante, formulario com honeypot.
 
 ---
 
-## 9. Referências rápidas
+## 8. Licenca e creditos
 
-- **Site em produção**: https://www.roboticsbr.com/  
-- **Documentação de uso**: `README.md` (instalação, comandos, deploy)  
-- **Como visualizar localmente**: `COMO-VISUALIZAR.md`  
+- (c) 2026 RoboticsBr. Todos os direitos reservados.
 
 ---
 
-*Documento gerado para referência do projeto RBR-SITE — RoboticsBr | Marketing e Tecnologia.*
+## 9. Referencias rapidas
+
+- **Site em producao**: https://www.roboticsbr.com/
+- **Documentacao de uso**: `README.md`
+- **Como visualizar localmente**: `COMO-VISUALIZAR.md`
+- **Arquitetura detalhada**: `docs/architecture.md`
+- **Design system**: `docs/design-system.md`
+
+---
+
+_Documento de referencia do projeto RBR-SITE - RoboticsBr | Marketing e Tecnologia._

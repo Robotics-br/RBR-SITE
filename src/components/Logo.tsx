@@ -1,51 +1,29 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface LogoProps {
   className?: string;
   height?: number;
   variant?: 'light' | 'dark';
-  imageName?: string;
 }
 
-export default function Logo({ 
-  className = '', 
-  height = 40, 
+const LOGO_SRC = '/images/logo-roboticsbr.png';
+
+export default function Logo({
+  className = '',
+  height = 40,
   variant = 'light',
-  imageName
-}: LogoProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [showPlaceholder, setShowPlaceholder] = useState(false);
-  
-  const possibleNames = imageName 
-    ? [imageName]
-    : [
-        'logo-roboticsbr.png',
-        'logo-roboticsbr.jpg',
-        'logo-roboticsbr.jpeg',
-        'logo-roboticsbr.webp',
-        'logo.png',
-        'logo.jpg',
-        'roboticsbr-logo.png',
-        'roboticsbr-logo.jpg'
-      ];
-  
-  const imagePath = `/images/${possibleNames[currentImageIndex]}`;
-  
-  const handleImageError = () => {
-    if (currentImageIndex < possibleNames.length - 1) {
-      setCurrentImageIndex(prev => prev + 1);
-    } else {
-      setShowPlaceholder(true);
-    }
-  };
-  
-  if (showPlaceholder) {
+}: Readonly<LogoProps>) {
+  const [errored, setErrored] = useState(false);
+  const width = Math.round(height * 4); // razao aproximada do logo
+
+  if (errored) {
     return (
-      <div 
+      <div
         className={className}
-        style={{ 
+        style={{
           height: `${height}px`,
           display: 'flex',
           alignItems: 'center',
@@ -53,28 +31,24 @@ export default function Logo({
           fontWeight: 700,
           fontSize: `${Math.max(16, height * 0.45)}px`,
           letterSpacing: '-0.5px',
-          whiteSpace: 'nowrap'
+          whiteSpace: 'nowrap',
         }}
       >
         RoboticsBr
       </div>
     );
   }
-  
+
   return (
-    <img 
-      key={currentImageIndex}
-      src={imagePath} 
-      alt="RoboticsBr Logo" 
+    <Image
+      src={LOGO_SRC}
+      alt="RoboticsBr"
+      width={width}
+      height={height}
+      priority
       className={className}
-      style={{ 
-        height: `${height}px`,
-        width: 'auto',
-        objectFit: 'contain',
-        display: 'block',
-        maxWidth: '100%'
-      }}
-      onError={handleImageError}
+      style={{ height: `${height}px`, width: 'auto', objectFit: 'contain' }}
+      onError={() => setErrored(true)}
     />
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
 
 type AnimationType = 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right';
 
@@ -35,9 +36,14 @@ export default function AnimatedSection({
   animation = 'fade-up',
   delay = 0,
   className = '',
-}: AnimatedSectionProps) {
+}: Readonly<AnimatedSectionProps>) {
   const { ref, isVisible } = useScrollAnimation();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const { hidden, visible } = animationClasses[animation];
+
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <div

@@ -5,7 +5,9 @@ import { blogPosts } from '@/data/blog';
 
 export const metadata: Metadata = {
   title: 'Blog - Modernização e Automação para Empresas',
-  description: 'Artigos sobre automação, tecnologia e inteligência de dados para PMEs — RoboticsBr.',
+  description:
+    'Artigos sobre automação, tecnologia e inteligência de dados para PMEs — RoboticsBr.',
+  alternates: { canonical: 'https://www.roboticsbr.com/blog' },
 };
 
 const categoryStyles: Record<string, string> = {
@@ -20,9 +22,11 @@ function categoryClass(category: string): string {
 
 function formatDate(iso: string): string {
   try {
-    return new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }).format(
-      new Date(iso + 'T12:00:00'),
-    );
+    return new Intl.DateTimeFormat('pt-BR', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    }).format(new Date(iso + 'T12:00:00'));
   } catch {
     return iso;
   }
@@ -31,36 +35,43 @@ function formatDate(iso: string): string {
 export default function BlogPage() {
   return (
     <>
-      <section className="pt-28 pb-12 md:pt-32 md:pb-16 bg-gradient-to-b from-slate-900 to-indigo-950 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-indigo-300 text-sm font-bold uppercase tracking-widest mb-4">Insights</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold">Blog</h1>
-          <p className="mt-4 text-lg text-indigo-100/90 max-w-2xl mx-auto">
+      <section className="bg-gradient-to-b from-slate-900 to-indigo-950 pt-28 pb-12 text-white md:pt-32 md:pb-16">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="mb-4 text-sm font-bold tracking-widest text-indigo-300 uppercase">
+            Insights
+          </p>
+          <h1 className="text-4xl font-extrabold md:text-5xl">Blog</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-indigo-100/90">
             Modernização, automação e dados — conteúdo prático para decisões no seu negócio.
           </p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-[#f6f9fc]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <section className="bg-[#f6f9fc] py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all flex flex-col overflow-hidden"
+                className="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:border-indigo-100 hover:shadow-md"
               >
-                <div className="p-6 md:p-7 flex flex-col flex-1">
+                <div className="flex flex-1 flex-col p-6 md:p-7">
                   <span
                     className={`inline-flex self-start rounded-full px-3 py-1 text-xs font-bold ring-1 ring-inset ${categoryClass(post.category)}`}
                   >
                     {post.category}
                   </span>
-                  <h2 className="mt-4 text-xl font-extrabold text-slate-900 leading-snug">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-indigo-700 transition-colors">
+                  <h2 className="mt-4 text-xl leading-snug font-extrabold text-slate-900">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="transition-colors hover:text-indigo-700"
+                    >
                       {post.title}
                     </Link>
                   </h2>
-                  <p className="mt-3 text-slate-600 text-sm leading-relaxed flex-1">{post.excerpt}</p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                    {post.excerpt}
+                  </p>
                   <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-slate-500">
                     <span className="inline-flex items-center gap-1.5">
                       <Clock size={14} className="text-indigo-500" />

@@ -1,33 +1,108 @@
 import type { MetadataRoute } from 'next';
 import { cases } from '@/data/cases';
 import { blogPosts } from '@/data/blog';
+import { SITE_URL } from '@/lib/constants';
+
+const STATIC_LAST_MODIFIED = '2026-05-01';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.roboticsbr.com';
-
   const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
-    { url: `${baseUrl}/sobre`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/equipe`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/contato`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/cases`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/servicos`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/servicos/clinicas`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/servicos/distribuidoras`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/servicos/escritorios`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    {
+      url: SITE_URL,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: `${SITE_URL}/sobre`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/equipe`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/contato`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/metodologia`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/solucoes`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/blog`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/cases`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/servicos`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicos/clinicas`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicos/distribuidoras`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/servicos/escritorios`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/politica-de-privacidade`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/termos-de-uso`,
+      lastModified: new Date(STATIC_LAST_MODIFIED),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 
   const casePages: MetadataRoute.Sitemap = cases.map((c) => ({
-    url: `${baseUrl}/cases/${c.slug}`,
-    lastModified: new Date(),
+    url: `${SITE_URL}/cases/${c.slug}`,
+    lastModified: new Date(c.updatedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
-    url: `${baseUrl}/blog/${p.slug}`,
-    lastModified: new Date(p.date),
+    url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.updatedAt ?? p.date),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));

@@ -1,12 +1,23 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
 
   --color-slate-850: #1e293b;
   --color-accent-start: #4f46e5;
   --color-accent-mid: #9333ea;
   --color-accent-end: #fb923c;
+}
+
+:root {
+  /* Z-index escala */
+  --z-base: 0;
+  --z-sticky: 30;
+  --z-nav: 40;
+  --z-overlay: 50;
+  --z-toast: 60;
+  --z-modal: 70;
+  --z-skip: 100;
 }
 
 body {
@@ -25,4 +36,16 @@ body {
 
 .bg-stripe-subtle {
   background-image: linear-gradient(180deg, #f6f9fc 0%, #ffffff 100%);
+}
+
+/* Acessibilidade: respeita usuarios com configuracao de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

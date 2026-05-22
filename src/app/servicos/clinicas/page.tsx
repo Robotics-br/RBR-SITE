@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CalendarClock, Headphones, MessageCircle, PhoneOff, Sparkles } from 'lucide-react';
+import {
+  ArrowRight,
+  CalendarClock,
+  Headphones,
+  MessageCircle,
+  PhoneOff,
+  Sparkles,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Automação para Clínicas Médicas e Atendimento Inteligente',
@@ -13,6 +20,7 @@ export const metadata: Metadata = {
     'confirmação automática consulta',
     'agendamento automatizado saúde',
   ],
+  alternates: { canonical: 'https://www.roboticsbr.com/servicos/clinicas' },
   openGraph: {
     title: 'Automação para Clínicas Médicas | RoboticsBr',
     description:
@@ -77,65 +85,80 @@ const faqJsonLd = {
 export default function ServicosClinicasPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
-      <div className="pt-24 pb-20 bg-[#f6f9fc] min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#f6f9fc] pt-24 pb-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center md:text-left">
-            <div className="inline-flex items-center bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 mb-6">
-              <span className="text-xs font-bold uppercase tracking-wide text-indigo-600">Saúde</span>
+            <div className="mb-6 inline-flex items-center rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1">
+              <span className="text-xs font-bold tracking-wide text-indigo-600 uppercase">
+                Saúde
+              </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
+            <h1 className="mb-4 text-4xl leading-tight font-extrabold text-slate-900 md:text-5xl">
               Automação para clínicas médicas que automatiza o atendimento sem perder proximidade
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
-              Combine agendamento inteligente, confirmações automáticas e WhatsApp para clínicas em um fluxo único —
-              para você <strong className="font-semibold text-slate-800">automatizar atendimento clínica</strong> e
-              devolver tempo à equipe de quem cuida de pacientes de verdade.
+            <p className="max-w-3xl text-lg leading-relaxed text-slate-600">
+              Combine agendamento inteligente, confirmações automáticas e WhatsApp para clínicas em
+              um fluxo único — para você{' '}
+              <strong className="font-semibold text-slate-800">
+                automatizar atendimento clínica
+              </strong>{' '}
+              e devolver tempo à equipe de quem cuida de pacientes de verdade.
             </p>
           </div>
 
-          <section className="bg-white rounded-2xl border border-slate-100 p-8 md:p-10 shadow-sm mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">O problema que vemos nas clínicas</h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Recepções ficam presas em ligações de confirmação, reagendamento e perguntas repetidas. Pacientes esperam na
-              linha, faltas continuam altas e a equipe não sobra energia para o atendimento presencial de qualidade.
+          <section className="mb-10 rounded-2xl border border-slate-100 bg-white p-8 shadow-sm md:p-10">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">
+              O problema que vemos nas clínicas
+            </h2>
+            <p className="mb-4 leading-relaxed text-slate-600">
+              Recepções ficam presas em ligações de confirmação, reagendamento e perguntas
+              repetidas. Pacientes esperam na linha, faltas continuam altas e a equipe não sobra
+              energia para o atendimento presencial de qualidade.
             </p>
-            <p className="text-slate-600 leading-relaxed">
-              Quem busca <strong className="font-semibold text-slate-800">automação para clínicas médicas</strong> quer
-              menos ruído operacional, não menos humanidade — e é exatamente isso que desenhamos.
+            <p className="leading-relaxed text-slate-600">
+              Quem busca{' '}
+              <strong className="font-semibold text-slate-800">
+                automação para clínicas médicas
+              </strong>{' '}
+              quer menos ruído operacional, não menos humanidade — e é exatamente isso que
+              desenhamos.
             </p>
           </section>
 
-          <section className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl border border-indigo-100 p-8 md:p-10 mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">O que a RoboticsBr entrega</h2>
-            <p className="text-slate-700 leading-relaxed mb-4">
-              Fluxos em n8n e integrações seguras conectam WhatsApp, calendário e seus sistemas. Agendamento guiado,
-              lembretes e confirmações rodam no automático; dúvidas frequentes têm resposta imediata; exceções viram
-              tarefa clara para a recepção ou enfermagem.
+          <section className="mb-10 rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 to-purple-50 p-8 md:p-10">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">O que a RoboticsBr entrega</h2>
+            <p className="mb-4 leading-relaxed text-slate-700">
+              Fluxos em n8n e integrações seguras conectam WhatsApp, calendário e seus sistemas.
+              Agendamento guiado, lembretes e confirmações rodam no automático; dúvidas frequentes
+              têm resposta imediata; exceções viram tarefa clara para a recepção ou enfermagem.
             </p>
-            <p className="text-slate-700 leading-relaxed">
-              Você ganha indicadores de volume de conversas, taxa de confirmação e gargalos — para evoluir o atendimento
-              com dados, não achismo.
+            <p className="leading-relaxed text-slate-700">
+              Você ganha indicadores de volume de conversas, taxa de confirmação e gargalos — para
+              evoluir o atendimento com dados, não achismo.
             </p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Benefícios em evidência</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <h2 className="mb-6 text-2xl font-bold text-slate-900">Benefícios em evidência</h2>
+            <div className="grid gap-6 sm:grid-cols-2">
               {benefits.map((b) => {
                 const Icon = b.icon;
                 return (
                   <div
                     key={b.title}
-                    className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm flex gap-4"
+                    className="flex gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-indigo-700" aria-hidden />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-indigo-100">
+                      <Icon className="h-6 w-6 text-indigo-700" aria-hidden />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 mb-1">{b.title}</h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">{b.text}</p>
+                      <h3 className="mb-1 font-bold text-slate-900">{b.title}</h3>
+                      <p className="text-sm leading-relaxed text-slate-600">{b.text}</p>
                     </div>
                   </div>
                 );
@@ -143,17 +166,18 @@ export default function ServicosClinicasPage() {
             </div>
           </section>
 
-          <section className="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm mb-12">
-            <div className="flex items-start gap-3 mb-4">
-              <Headphones className="w-8 h-8 text-indigo-600 flex-shrink-0" aria-hidden />
+          <section className="mb-12 rounded-2xl border border-slate-100 bg-white p-8 shadow-sm">
+            <div className="mb-4 flex items-start gap-3">
+              <Headphones className="h-8 w-8 flex-shrink-0 text-indigo-600" aria-hidden />
               <div>
-                <h2 className="text-xl font-bold text-slate-900 mb-2">Case relacionado</h2>
-                <p className="text-slate-600 text-sm mb-4">
-                  Veja como reduzimos carga telefônica e aceleramos agendamentos em uma clínica real.
+                <h2 className="mb-2 text-xl font-bold text-slate-900">Case relacionado</h2>
+                <p className="mb-4 text-sm text-slate-600">
+                  Veja como reduzimos carga telefônica e aceleramos agendamentos em uma clínica
+                  real.
                 </p>
                 <Link
                   href="/cases/atendimento-automatizado-clinica"
-                  className="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-500 transition-colors"
+                  className="inline-flex items-center font-semibold text-indigo-600 transition-colors hover:text-indigo-500"
                 >
                   Atendimento automatizado para clínica
                   <ArrowRight size={16} className="ml-1" />
@@ -163,25 +187,31 @@ export default function ServicosClinicasPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Perguntas frequentes</h2>
+            <h2 className="mb-6 text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
             <div className="space-y-8">
               {faq.map((item) => (
-                <div key={item.q} className="border-b border-slate-200 pb-8 last:border-0 last:pb-0">
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">{item.q}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.a}</p>
+                <div
+                  key={item.q}
+                  className="border-b border-slate-200 pb-8 last:border-0 last:pb-0"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-slate-900">{item.q}</h3>
+                  <p className="leading-relaxed text-slate-600">{item.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="bg-slate-900 rounded-2xl p-8 md:p-10 text-center text-white">
-            <h2 className="text-2xl font-bold mb-3">Pronto para aliviar a recepção e encantar pacientes?</h2>
-            <p className="text-indigo-200 mb-8 max-w-lg mx-auto">
-              Solicite um diagnóstico de eficiência e receba um plano claro para automatizar o que hoje trava sua clínica.
+          <section className="rounded-2xl bg-slate-900 p-8 text-center text-white md:p-10">
+            <h2 className="mb-3 text-2xl font-bold">
+              Pronto para aliviar a recepção e encantar pacientes?
+            </h2>
+            <p className="mx-auto mb-8 max-w-lg text-indigo-200">
+              Solicite um diagnóstico de eficiência e receba um plano claro para automatizar o que
+              hoje trava sua clínica.
             </p>
             <Link
               href="/contato"
-              className="inline-flex items-center px-8 py-4 text-base font-bold rounded-full bg-indigo-600 hover:bg-indigo-500 text-white transition-all"
+              className="inline-flex items-center rounded-full bg-indigo-600 px-8 py-4 text-base font-bold text-white transition-all hover:bg-indigo-500"
             >
               Falar com a RoboticsBr
               <ArrowRight size={18} className="ml-2" />

@@ -5,6 +5,7 @@
 Certifique-se de ter o **Node.js** instalado (versão 18 ou superior).
 
 Para verificar se você tem o Node.js instalado, execute no terminal:
+
 ```bash
 node --version
 npm --version
@@ -56,12 +57,15 @@ O servidor iniciará e você verá uma mensagem como:
 ## Problemas Comuns
 
 ### Erro: "command not found: npm"
+
 - Instale o Node.js primeiro
 
 ### Erro: "Port 3000 is already in use"
+
 - Use outra porta: `npm run dev -- --port 3001`
 
 ### Erro ao instalar dependências
+
 - Tente limpar o cache: `npm cache clean --force`
 - Delete a pasta `node_modules` e o arquivo `package-lock.json`, depois execute `npm install` novamente
 

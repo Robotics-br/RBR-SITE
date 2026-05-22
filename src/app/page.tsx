@@ -10,10 +10,18 @@ import Portfolio from '@/components/Portfolio';
 import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
 import AnimatedSection from '@/components/AnimatedSection';
+import { homeFaqItems } from '@/data/faq';
+import { buildFaqJsonLd } from '@/lib/jsonld';
 
 export default function Home() {
+  const faqJsonLd = buildFaqJsonLd(homeFaqItems);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Hero />
       <AnimatedSection animation="fade-in">
         <SocialProof />
