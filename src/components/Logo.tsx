@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface LogoProps {
   className?: string;
@@ -9,35 +6,10 @@ interface LogoProps {
   variant?: 'light' | 'dark';
 }
 
-const LOGO_SRC = '/images/logo-roboticsbr.png';
+const LOGO_SRC = '/images/logo-roboticsbr.webp';
 
-export default function Logo({
-  className = '',
-  height = 40,
-  variant = 'light',
-}: Readonly<LogoProps>) {
-  const [errored, setErrored] = useState(false);
-  const width = Math.round(height * 4); // razao aproximada do logo
-
-  if (errored) {
-    return (
-      <div
-        className={className}
-        style={{
-          height: `${height}px`,
-          display: 'flex',
-          alignItems: 'center',
-          color: variant === 'light' ? '#1e293b' : '#FFFFFF',
-          fontWeight: 700,
-          fontSize: `${Math.max(16, height * 0.45)}px`,
-          letterSpacing: '-0.5px',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        RoboticsBr
-      </div>
-    );
-  }
+export default function Logo({ className = '', height = 40 }: Readonly<LogoProps>) {
+  const width = Math.round(height * 4);
 
   return (
     <Image
@@ -48,7 +20,6 @@ export default function Logo({
       priority
       className={className}
       style={{ height: `${height}px`, width: 'auto', objectFit: 'contain' }}
-      onError={() => setErrored(true)}
     />
   );
 }

@@ -69,10 +69,37 @@ flowchart LR
 ## Performance
 
 - Imagens via `next/image` com formats AVIF/WebP.
+- Assets de origem em **WebP** (`/images/portfolio/*.webp`, `/team/*.webp`, `logo-roboticsbr.webp`).
+  - Portfolio: 2 MB JPG -> 300 KB WebP (-85%).
+  - Team: 648 KB JPG -> 196 KB WebP (-70%).
+  - Logo: 53 KB PNG -> 4 KB WebP (-92%).
 - Inter via `next/font` (auto self-hosted, zero CLS).
 - `experimental.optimizePackageImports` para tree-shake do `lucide-react`.
+- Resource hints no `<head>`: `preconnect` para Formspree, `dns-prefetch` para GTM/GA/Vercel scripts.
 - Scroll handlers com `requestAnimationFrame`.
 - Carrosseis pausam em aba inativa (visibilitychange) e em `prefers-reduced-motion`.
+- `Logo` e Server Component (zero JS no client para o header).
+- Bundle analyzer disponivel via `npm run analyze` (relatorio HTML em `.next/analyze/`).
+
+## Cache e CDN
+
+Servido pela **Vercel Edge Network** (CDN global multi-regiao). Estrategia em
+`vercel.json`:
+
+| Caminho                                                | Cache-Control                                                      | Motivo                                                                              |
+| ------------------------------------------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| `/_next/static/(.*)`                                   | `public, max-age=31536000, immutable`                              | Hash no nome -> imutavel                                                            |
+| `/images/(.*)`, `/team/(.*)`                           | `public, max-age=31536000, immutable`                              | Versionar via rename quando atualizar                                               |
+| `/(icon\|apple-icon\|favicon).(.*)`                    | `public, max-age=31536000, immutable`                              | Idem                                                                                |
+| `/sitemap.xml`, `/robots.txt`, `/manifest.webmanifest` | `public, max-age=86400`                                            | 1 dia                                                                               |
+| HTML (`/(.*)`)                                         | `public, max-age=0, s-maxage=86400, stale-while-revalidate=604800` | Browser sempre revalida; edge cache 1 dia, serve stale por 7 dias enquanto revalida |
+
+Compressao Brotli/Gzip e aplicada automaticamente pela Vercel.
+
+**Atencao ao versionamento:** com `immutable` em assets estaticos, mudar o
+_conteudo_ sem renomear pode servir versao antiga aos browsers ja com cache.
+Quando substituir um asset (logo, imagem de portfolio), renomeie com sufixo
+(`logo-roboticsbr-v2.webp`) e atualize a referencia no codigo.
 
 ## Acessibilidade
 

@@ -31,7 +31,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       'Redução de 60% nas ligações telefônicas com assistente digital para agendamento e dúvidas de pacientes.',
     category: 'sistema',
-    image: '/images/portfolio/chatbot-clinica.jpg',
+    image: '/images/portfolio/chatbot-clinica.webp',
     client: 'Clínica Vida Plena',
     industry: 'Saúde',
     duration: '3 semanas',
@@ -62,7 +62,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       'Ciclo de vendas reduzido pela metade com automação que gera propostas personalizadas em minutos.',
     category: 'sistema',
-    image: '/images/portfolio/automacao-propostas.jpg',
+    image: '/images/portfolio/automacao-propostas.webp',
     client: 'Torres Engenharia',
     industry: 'Engenharia',
     duration: '4 semanas',
@@ -93,7 +93,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       'Decisões 3x mais rápidas com dashboards que consolidam dados de vendas, marketing e operações em tempo real.',
     category: 'sistema',
-    image: '/images/portfolio/dashboard-bi.jpg',
+    image: '/images/portfolio/dashboard-bi.webp',
     client: 'Distribuidora Almeida',
     industry: 'Distribuição',
     duration: '5 semanas',
@@ -124,7 +124,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       'Economia de 30h semanais com tecnologia que classifica, extrai e organiza documentos automaticamente.',
     category: 'sistema',
-    image: '/images/portfolio/triagem-docs.jpg',
+    image: '/images/portfolio/triagem-docs.webp',
     client: 'PG Assessoria Contábil',
     industry: 'Contabilidade',
     duration: '4 semanas',
@@ -155,7 +155,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       '4 colaboradores liberados para atividades estratégicas com automação gerenciando o suporte de primeiro nível.',
     category: 'sistema',
-    image: '/images/portfolio/atendimento-ia.jpg',
+    image: '/images/portfolio/atendimento-ia.webp',
     client: 'TechSolutions Ltda',
     industry: 'Tecnologia',
     duration: '3 semanas',
@@ -181,7 +181,7 @@ export const cases: CaseStudy[] = [
     shortDescription:
       'ERP, CRM e marketing conectados com workflows automatizados que eliminam retrabalho e erros manuais.',
     category: 'sistema',
-    image: '/images/portfolio/integracao-ia.jpg',
+    image: '/images/portfolio/integracao-ia.webp',
     client: 'GrupoVale Distribuição',
     industry: 'Distribuição',
     duration: '6 semanas',

@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
     role: 'Engenheiro de Software & Automação',
     slogan: 'Onde a tecnologia vira resultado.',
     description: 'Criamos sistemas, integrações e automações que escalam o seu negócio.',
-    image: '/team/eng.jpg',
+    image: '/team/eng.webp',
     highlightColor: 'from-blue-500 to-indigo-600',
   },
   {
@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
     role: 'Estrategista de Mídias Sociais',
     slogan: 'Conteúdo com propósito e estratégia.',
     description: 'Não postamos por postar. Criamos posicionamento, autoridade e crescimento.',
-    image: '/team/social.jpg',
+    image: '/team/social.webp',
     highlightColor: 'from-pink-500 to-rose-500',
   },
   {
@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
     role: 'Arquiteto de Experiências Digitais',
     slogan: 'Tudo conectado. Tudo funcionando.',
     description: 'Integramos sistemas, automações e redes sociais em uma experiência única.',
-    image: '/team/arch.jpg',
+    image: '/team/arch.webp',
     highlightColor: 'from-cyan-400 to-teal-500',
   },
   {
@@ -44,7 +44,7 @@ const teamMembers: TeamMember[] = [
     role: 'Gestor de Sucesso do Cliente',
     slogan: 'Seu objetivo é a nossa meta.',
     description: 'Acompanhamos, ajustamos e garantimos que você chegue onde quer chegar.',
-    image: '/team/cs.jpg',
+    image: '/team/cs.webp',
     highlightColor: 'from-amber-400 to-orange-500',
   },
 ];
