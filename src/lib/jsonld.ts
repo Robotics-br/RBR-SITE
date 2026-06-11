@@ -14,6 +14,8 @@ export const organizationJsonLd = {
   name: COMPANY_NAME,
   legalName: 'RoboticsBr - Marketing e Tecnologia',
   url: SITE_URL,
+  logo: `${SITE_URL}/images/logo-roboticsbr.webp`,
+  image: `${SITE_URL}/opengraph-image`,
   telephone: CONTACT_PHONE_E164,
   email: CONTACT_EMAIL,
   description:

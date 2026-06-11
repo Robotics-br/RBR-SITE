@@ -1,10 +1,24 @@
+/**
+ * Allowlist de esquemas seguros para links autorais.
+ * Aceita caminhos relativos/âncoras (/, #, ?) e os esquemas http(s), mailto e tel.
+ * Qualquer outra coisa (javascript:, data:, vbscript: etc.) é rejeitada.
+ */
+function sanitizeUrl(raw: string): string | null {
+  const url = raw.trim();
+  const isRelative = /^[/#?]/.test(url);
+  const isSafeScheme = /^(?:https?:|mailto:|tel:)/i.test(url);
+  if (isRelative || isSafeScheme) return url.replaceAll('"', '%22');
+  return null;
+}
+
 function processInline(text: string): string {
   let s = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  s = s.replace(
-    /\[([^\]]+)]\(([^)]+)\)/g,
-    '<a href="$2" class="text-indigo-600 font-semibold underline-offset-2 hover:underline">$1</a>'
-  );
+  s = s.replace(/\[([^\]]+)]\(([^)]+)\)/g, (_match, label: string, url: string) => {
+    const safe = sanitizeUrl(url);
+    if (!safe) return label;
+    return `<a href="${safe}" class="text-indigo-600 font-semibold underline-offset-2 hover:underline">${label}</a>`;
+  });
   return s;
 }
 
