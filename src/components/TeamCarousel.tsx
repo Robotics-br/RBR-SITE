@@ -99,10 +99,10 @@ export default function TeamCarousel() {
     <section className="relative overflow-hidden bg-[#f6f9fc] pt-8 pb-12">
       <div className="mx-auto mb-6 max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p className="mb-3 text-xs font-bold tracking-widest text-indigo-600 uppercase">
-          Areas de expertise
+          Áreas de expertise
         </p>
         <h2 className="mb-3 text-3xl font-bold text-slate-900">
-          Os papeis que cuidam da sua operacao
+          Os papéis que cuidam da sua operação
         </h2>
         <p className="mx-auto max-w-2xl text-slate-600">
           Nossa equipe combina quatro especialidades complementares para entregar resultados de

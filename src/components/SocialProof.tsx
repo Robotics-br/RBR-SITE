@@ -38,7 +38,7 @@ export default function SocialProof() {
           <Metric icon={<Clock size={24} />} value="120h" label="Economizadas por mês em média" />
           <Metric
             icon={<Zap size={24} />}
-            value="15 dias"
+            value="10-15 dias"
             label="Para o primeiro resultado concreto"
           />
           <Metric

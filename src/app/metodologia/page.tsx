@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react';
 import Methodology from '@/components/Methodology';
 
 export const metadata: Metadata = {
-  title: 'Metodologia em 3 fases - Diagnostico, Implementacao e Acompanhamento',
+  title: 'Metodologia em 3 fases - Diagnóstico, Implementação e Acompanhamento',
   description:
-    'Conheca a metodologia da RoboticsBr: diagnostico de eficiencia em 7 dias, implementacao em 10-15 dias e acompanhamento quinzenal continuo.',
+    'Conheça a metodologia da RoboticsBr: diagnóstico de eficiência em 7 dias, implementação em 10-15 dias e acompanhamento quinzenal contínuo.',
   alternates: { canonical: 'https://www.roboticsbr.com/metodologia' },
 };
 
@@ -20,8 +20,8 @@ export default function MetodologiaPage() {
           </p>
           <h1 className="text-4xl font-extrabold md:text-5xl">Nossa metodologia</h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-indigo-100/90">
-            Tres fases simples e mensuraveis para modernizar sua empresa sem complexidade
-            desnecessaria.
+            Três fases simples e mensuráveis para modernizar sua empresa sem complexidade
+            desnecessária.
           </p>
         </div>
       </section>
@@ -30,12 +30,12 @@ export default function MetodologiaPage() {
 
       <section className="bg-slate-900 py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-2xl font-bold md:text-3xl">Pronto para comecar?</h2>
+          <h2 className="mb-6 text-2xl font-bold md:text-3xl">Pronto para começar?</h2>
           <Link
             href="/contato"
             className="inline-flex items-center rounded-full bg-indigo-600 px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-indigo-500"
           >
-            Quero meu Diagnostico de Eficiencia Gratuito
+            Quero meu Diagnóstico de Eficiência Gratuito
             <ArrowRight size={18} className="ml-2" />
           </Link>
         </div>

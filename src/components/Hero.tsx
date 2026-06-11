@@ -29,8 +29,8 @@ export default function Hero() {
             </h1>
 
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-slate-600 md:text-xl">
-              Diagnostico em 7 dias, primeiros resultados em 15. Tiramos da sua mesa o que e
-              repetitivo e devolvemos tempo para o que cresce o negocio.
+              Diagnóstico em 7 dias, primeiros resultados em 10 a 15 dias. Tiramos da sua mesa o que
+              é repetitivo e devolvemos tempo para o que cresce o negócio.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">

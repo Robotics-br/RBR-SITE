@@ -91,13 +91,13 @@ export default function CookieBanner() {
             <div className="flex flex-1 items-start gap-3">
               <ShieldCheck size={24} className="mt-0.5 flex-shrink-0 text-indigo-600" />
               <p className="text-sm leading-relaxed text-slate-700">
-                Utilizamos cookies para melhorar sua experiencia de navegacao e analisar o trafego
+                Utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego
                 do site, em conformidade com a <strong>LGPD</strong>. Saiba mais em nossa{' '}
                 <Link
                   href="/politica-de-privacidade"
                   className="font-semibold text-indigo-600 hover:underline"
                 >
-                  Politica de Privacidade
+                  Política de Privacidade
                 </Link>
                 .
               </p>

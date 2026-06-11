@@ -30,7 +30,7 @@ export default function ScrollProgress() {
     <div
       className="fixed top-0 left-0 z-[var(--z-toast)] h-1 w-full bg-transparent"
       role="progressbar"
-      aria-label="Progresso da pagina"
+      aria-label="Progresso da página"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}
       aria-valuemax={100}

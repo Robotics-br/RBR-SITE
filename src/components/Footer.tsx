@@ -180,7 +180,7 @@ export default function Footer() {
               href="/politica-de-privacidade"
               className="transition-colors hover:text-indigo-600"
             >
-              Politica de Privacidade
+              Política de Privacidade
             </Link>
             <span className="hidden text-slate-300 md:inline">|</span>
             <Link href="/termos-de-uso" className="transition-colors hover:text-indigo-600">

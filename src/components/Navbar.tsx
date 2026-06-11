@@ -95,14 +95,14 @@ export default function Navbar() {
           ? 'border-b border-slate-200 bg-white/80 py-3 backdrop-blur-md'
           : 'bg-transparent py-5'
       }`}
-      aria-label="Navegacao principal"
+      aria-label="Navegação principal"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link
             href="/"
             className="group flex cursor-pointer items-center"
-            aria-label="Pagina inicial"
+            aria-label="Página inicial"
           >
             <Logo
               height={40}
@@ -151,7 +151,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           id="mobile-nav"
-          aria-label="Menu de navegacao"
+          aria-label="Menu de navegação"
           className="absolute top-full left-0 flex w-full flex-col space-y-4 border-b border-slate-100 bg-white p-4 shadow-xl md:hidden"
         >
           {NAV_LINKS.map((link, idx) => (

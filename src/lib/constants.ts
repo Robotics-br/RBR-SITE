@@ -17,7 +17,7 @@ export const CONTACT_ADDRESS = {
   country: 'BR',
 } as const;
 
-export const CONTACT_ADDRESS_DISPLAY = 'Rua: Ray Wesley Herrick, CEP: 13565-090, SAO CARLOS - SP';
+export const CONTACT_ADDRESS_DISPLAY = 'Rua: Ray Wesley Herrick, CEP: 13565-090, SÃO CARLOS - SP';
 
 export const SOCIAL = {
   instagram: 'https://instagram.com/roboticsbr',
@@ -26,10 +26,10 @@ export const SOCIAL = {
 } as const;
 
 export const WHATSAPP_DEFAULT_MSG =
-  'Ola! Vim pelo site da RoboticsBr e gostaria de saber mais sobre modernizacao e automacao para minha empresa.';
+  'Olá! Vim pelo site da RoboticsBr e gostaria de saber mais sobre modernização e automação para minha empresa.';
 
 export const WHATSAPP_DISCOVERY_MSG =
-  'Ola! Gostaria de agendar uma chamada de descoberta de 15 minutos.';
+  'Olá! Gostaria de agendar uma chamada de descoberta de 15 minutos.';
 
 export const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? '';
 

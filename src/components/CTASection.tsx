@@ -12,10 +12,10 @@ export default function CTASection() {
           Sua empresa não pode esperar
         </p>
         <h2 className="mb-6 text-3xl leading-tight font-extrabold md:text-5xl">
-          Em 7 dias voce sabe exatamente o que automatizar primeiro.
+          Em 7 dias você sabe exatamente o que automatizar primeiro.
         </h2>
         <p className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-indigo-200">
-          O Diagnostico de Eficiencia mapeia sua operacao, identifica os 3 maiores gargalos e
+          O Diagnóstico de Eficiência mapeia sua operação, identifica os 3 maiores gargalos e
           devolve um plano com prioridades, prazos e investimento estimado.
         </p>
         <p className="mb-10 text-sm text-indigo-300/80">

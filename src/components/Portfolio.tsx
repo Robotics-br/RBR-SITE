@@ -199,7 +199,7 @@ export default function Portfolio() {
             <div className="text-slate-600">Economizadas por Mês</div>
           </div>
           <div className="text-center">
-            <div className="mb-2 text-3xl font-bold text-slate-900 md:text-4xl">15 dias</div>
+            <div className="mb-2 text-3xl font-bold text-slate-900 md:text-4xl">10-15 dias</div>
             <div className="text-slate-600">Para Primeiro Resultado</div>
           </div>
           <div className="text-center">

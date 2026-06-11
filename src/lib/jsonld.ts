@@ -17,7 +17,7 @@ export const organizationJsonLd = {
   telephone: CONTACT_PHONE_E164,
   email: CONTACT_EMAIL,
   description:
-    'Ecossistema completo de modernizacao para empresas: automacao, presenca digital e inteligencia de dados em um unico parceiro.',
+    'Ecossistema completo de modernização para empresas: automação, presença digital e inteligência de dados em um único parceiro.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: CONTACT_ADDRESS.street,

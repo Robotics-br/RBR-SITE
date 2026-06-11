@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'RoboticsBr - Ecossistema completo de modernizacao';
+export const alt = 'RoboticsBr - Ecossistema completo de modernização';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -68,10 +68,10 @@ export default function OpenGraphImage() {
             letterSpacing: -1.5,
           }}
         >
-          Sua empresa mais agil, seus processos mais lucrativos.
+          Sua empresa mais ágil, seus processos mais lucrativos.
         </div>
         <div style={{ fontSize: 26, fontWeight: 500, opacity: 0.92, lineHeight: 1.35 }}>
-          Automacao inteligente, presenca digital estrategica e modernizacao em um unico parceiro.
+          Automação inteligente, presença digital estratégica e modernização em um único parceiro.
         </div>
       </div>
 
@@ -86,7 +86,7 @@ export default function OpenGraphImage() {
         }}
       >
         <span>www.roboticsbr.com</span>
-        <span>Diagnostico de Eficiencia gratuito</span>
+        <span>Diagnóstico de Eficiência gratuito</span>
       </div>
     </div>,
     { ...size }

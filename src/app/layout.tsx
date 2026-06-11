@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[var(--z-skip)] focus:rounded-lg focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-white"
           >
-            Pular para o conteudo
+            Pular para o conteúdo
           </a>
           <Navbar />
           <main id="main-content" className="flex-grow">

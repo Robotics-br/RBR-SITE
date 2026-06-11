@@ -6,9 +6,9 @@ import AudienceSegments from '@/components/AudienceSegments';
 import TechPillars from '@/components/TechPillars';
 
 export const metadata: Metadata = {
-  title: 'Solucoes - Automacao, Midias Sociais, BI e Growth integrados',
+  title: 'Soluções - Automação, Mídias Sociais, BI e Growth integrados',
   description:
-    'Conheca as solucoes da RoboticsBr: automacao de processos, gestao de midias sociais, inteligencia de dados e growth marketing em um unico parceiro.',
+    'Conheça as soluções da RoboticsBr: automação de processos, gestão de mídias sociais, inteligência de dados e growth marketing em um único parceiro.',
   alternates: { canonical: 'https://www.roboticsbr.com/solucoes' },
 };
 
@@ -20,9 +20,9 @@ export default function SolucoesPage() {
           <p className="mb-4 text-sm font-bold tracking-widest text-indigo-300 uppercase">
             O que entregamos
           </p>
-          <h1 className="text-4xl font-extrabold md:text-5xl">Solucoes integradas</h1>
+          <h1 className="text-4xl font-extrabold md:text-5xl">Soluções integradas</h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-indigo-100/90">
-            Quatro pilares que se conectam para resolver o que esta travando sua empresa.
+            Quatro pilares que se conectam para resolver o que está travando sua empresa.
           </p>
         </div>
       </section>
@@ -34,7 +34,7 @@ export default function SolucoesPage() {
       <section className="bg-white py-16 text-center">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-slate-900 md:text-3xl">
-            Vamos desenhar a solucao certa para sua empresa?
+            Vamos desenhar a solução certa para sua empresa?
           </h2>
           <Link
             href="/contato"

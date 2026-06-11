@@ -29,6 +29,7 @@ export default function ContatoPage() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [consent, setConsent] = useState(false);
   const [honeypot, setHoneypot] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -41,6 +42,7 @@ export default function ContatoPage() {
     else if (!isValidEmail(email)) next.email = 'E-mail inválido.';
     if (!subject.trim()) next.subject = 'Informe o assunto.';
     if (!message.trim()) next.message = 'Escreva sua mensagem.';
+    if (!consent) next.consent = 'É necessário aceitar a Política de Privacidade para enviar.';
     setErrors(next);
     return Object.keys(next).length === 0;
   };
@@ -65,7 +67,7 @@ export default function ContatoPage() {
       const res = await fetch(FORMSPREE_URL, {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, subject, message, _gotcha: honeypot }),
+        body: JSON.stringify({ name, email, subject, message, consent, _gotcha: honeypot }),
       });
       if (res.ok) {
         setStatus('success');
@@ -73,6 +75,7 @@ export default function ContatoPage() {
         setEmail('');
         setSubject('');
         setMessage('');
+        setConsent(false);
         setErrors({});
       } else {
         const data = await res.json().catch(() => null);
@@ -114,7 +117,7 @@ export default function ContatoPage() {
               <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm md:p-10">
                 <h2 className="mb-2 text-2xl font-extrabold text-slate-900">Envie sua mensagem</h2>
                 <p className="mb-8 text-sm text-slate-600 md:text-base">
-                  Conte-nos sobre sua operacao e os principais gargalos. Respondemos em ate 2h uteis
+                  Conte-nos sobre sua operação e os principais gargalos. Respondemos em até 2h úteis
                   nos dias de semana.
                 </p>
 
@@ -246,6 +249,35 @@ export default function ContatoPage() {
                     {errors.message && (
                       <p id="message-error" className="mt-1 text-sm text-red-600">
                         {errors.message}
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    <div className="flex items-start gap-3">
+                      <input
+                        id="consent"
+                        name="consent"
+                        type="checkbox"
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="mt-1 h-4 w-4 shrink-0 rounded border-slate-300 text-indigo-600 focus:ring-2 focus:ring-indigo-500"
+                        aria-invalid={!!errors.consent}
+                        aria-describedby={errors.consent ? 'consent-error' : undefined}
+                      />
+                      <label htmlFor="consent" className="text-sm leading-relaxed text-slate-600">
+                        Concordo com o tratamento dos meus dados para fins de contato, conforme a{' '}
+                        <Link
+                          href="/politica-de-privacidade"
+                          className="font-semibold text-indigo-600 hover:underline"
+                        >
+                          Política de Privacidade
+                        </Link>
+                        .
+                      </label>
+                    </div>
+                    {errors.consent && (
+                      <p id="consent-error" className="mt-1 text-sm text-red-600">
+                        {errors.consent}
                       </p>
                     )}
                   </div>
